@@ -3,6 +3,7 @@ import React from 'react'
 import pic01 from '../images/pic01.jpg'
 import pic02 from '../images/pic02.jpg'
 import pic03 from '../images/pic03.jpg'
+import fabiotovar from "../images/fabiotovar.png"
 
 class Main extends React.Component {
   render() {
@@ -167,6 +168,37 @@ class Main extends React.Component {
           </ul>
           {close}
         </article>
+
+        <article
+          id="fabio-tovar"
+          className={`${this.props.article === 'fabio-tovar' ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
+          style={{ display: 'none' }}
+        >
+          <h2 className="major">Fabio Steven Tovar Ramos</h2>
+          <span className="image main">
+            <img src={fabiotovar} alt="" />
+          </span>
+          <p>
+            Mi nombre es Fabio Steven Tovar Ramos, soy estudiante de último semestre de Ingeniería de Sistemas y Computación.
+            Tengo aproximadamente 3 años de experiencia trabajando especialmente en el desarrollo de software para web, 
+            móviles y del lado del back-end soportando varios procesos, y actualmente me encuentro trabajando como Full Stack Engineer en BunnyStudio.
+          </p>
+          <p>
+            Me considero una persona muy autodidácta, y dados mis intereses he estado estudiando temas como Inteligencia Artificial, Internet de las Cosas,
+            Ingeniería de Sofware y Arquitectura de Software. Considero que es una cualidad que todas las personas deberían tener especialmente en campos
+            como éste, donde las cosas cambian tan rápidamente. 
+          </p>
+          <p>
+            Encuentro muy interesante la Computación Visual y tengo altas expectativas de esta materia. Desde que este campo de
+            estudio surgió los avances han sido muy importantes y en aproximadamente 60 o 70 años de estudio solamente, la humanidad
+            ha logrado resultados muy satisfactorios, por lo tanto considero que es un área a la cuál se debería prestar especial
+            atención y que está ligada a otras áreas de mi interés.
+          </p>
+          {close}
+        </article>
+     
       </div>
     )
   }
