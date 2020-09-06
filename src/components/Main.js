@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import pic01 from '../images/pic01.jpg'
 import pic02 from '../images/pic02.jpg'
 import pic03 from '../images/pic03.jpg'
 import fabiotovar from "../images/fabiotovar.png"
+import vale from "../images/valentinacastano.jpg"
 
 class Main extends React.Component {
   render() {
@@ -23,35 +23,30 @@ class Main extends React.Component {
         style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
       >
         <article
-          id="intro"
-          className={`${this.props.article === 'intro' ? 'active' : ''} ${
+          id="valentina-castano"
+          className={`${this.props.article === 'valentina-castano' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">Intro</h2>
+          <h2 className="major">Valentina Castaño</h2>
           <span className="image main">
-            <img src={pic01} alt="" />
+            <img src={vale} alt="" />
           </span>
           <p>
-            Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
-            aliquam facilisis ante interdum congue. Integer mollis, nisl amet
-            convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
-            magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas.
-            By the way, check out my <a href="#work">awesome work</a>.
+            Mi nombre es Laura Valentina Castaño, soy estudiante de último año de ingeniería
+            de sistemas y computación, de la Universidad Nacional de Colombia. Mi objetivo
+            profesional está enfocado en la innovación, el análisis y la creación de proyectos
+            con enfoque en transformación digital. Para lograrlo trabajo en mis habilidades
+            para el desarrollo de software, procesamiento de datos e implementación de tecnologías disruptivas.
+            Soy una persona optimista, disciplinada y apasionada por lo que hace.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-            dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora
-            torquent per conubia nostra, per inceptos himenaeos. Etiam tristique
-            libero eu nibh porttitor fermentum. Nullam venenatis erat id
-            vehicula viverra. Nunc ultrices eros ut ultricies condimentum.
-            Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae
-            dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in
-            lectus. Pellentesque habitant morbi tristique senectus et netus et
-            malesuada fames ac turpis egestas. In non lorem sit amet elit
-            placerat maximus. Pellentesque aliquam maximus risus, vel sed
-            vehicula.
+            Tuve la oportunidad de trabajar un año como practicante en Sodexo Colombia, en el ára de innovación
+            & digital, desarrollando e implementando una metodología de innovación y estructurando el proceso
+            de vigilancia tecnológica. Actualmente trabajo con un proyecto de extension de la universidad,
+            desarrollando como Full-Stack un dashboard para el hospital universitario.
+            Soy certificada scrum master :)
           </p>
           {close}
         </article>
