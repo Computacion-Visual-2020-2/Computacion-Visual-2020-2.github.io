@@ -42,12 +42,22 @@ class Main extends React.Component {
             Soy una persona optimista, disciplinada y apasionada por lo que hace.
           </p>
           <p>
-            Tuve la oportunidad de trabajar un año como practicante en Sodexo Colombia, en el ára de innovación
+            Tuve la oportunidad de trabajar un año como practicante en Sodexo Colombia, en el área de innovación
             & digital, desarrollando e implementando una metodología de innovación y estructurando el proceso
             de vigilancia tecnológica. Actualmente trabajo con un proyecto de extension de la universidad,
             desarrollando como Full-Stack un dashboard para el hospital universitario.
             Soy certificada scrum master :)
           </p>
+          <ul className="icons">
+          <li>
+            <a
+              href="https://github.com/Valentinacs12"
+              className="icon fa-github"
+            >
+              <span className="label">GitHub</span>
+            </a>
+          </li>
+        </ul>
           {close}
         </article>
 
@@ -103,7 +113,7 @@ class Main extends React.Component {
           {close}
         </article>
 
-        <article
+       <article
           id="contact"
           className={`${this.props.article === 'contact' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''

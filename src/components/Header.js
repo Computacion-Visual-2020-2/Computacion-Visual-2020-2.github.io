@@ -9,13 +9,12 @@ const Header = props => (
     <div className="content">
       <div className="inner">
         <h1>Computación Visual</h1>
-        <h3>2020-II</h3>
+        <h3>Bienvenid@</h3>
         <p>
-          A fully responsive site template designed by{' '}
-          <a href="https://html5up.net">HTML5 UP</a> and released
+          En este sitio encontrarás las actividades de la asignatura{' '}
+          <a href="https://visualcomputing.github.io/">computación visual</a>
           <br />
-          for free under the{' '}
-          <a href="https://html5up.net/license">Creative Commons</a> license.
+          desarrolladas por el equipo de estudiantes que se presentan a continuación.
         </p>
       </div>
     </div>
@@ -48,15 +47,7 @@ const Header = props => (
             About
           </button>
         </li>
-        <li>
-          <button
-            onClick={() => {
-              props.onOpenArticle('contact')
-            }}
-          >
-            Contact
-          </button>
-        </li>
+
         <li>
           <button
             onClick={() => {
