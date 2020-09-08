@@ -5,6 +5,7 @@ import pic03 from '../images/pic03.jpg'
 import fabiotovar from "../images/fabiotovar.png"
 import julio from "../images/julio.jpg"
 import vale from "../images/valentinacastano.jpg"
+import brandonavilan from "../images/brandonavilan.jpg"
 
 class Main extends React.Component {
   render() {
@@ -245,7 +246,31 @@ class Main extends React.Component {
           </p>
           {close}
         </article>
-     
+
+        <article
+          id="brandon-avilan"
+          className={`${this.props.article === 'brandon-avilan' ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
+          style={{ display: 'none' }}
+        >
+          <h2 className="major">Brandon Sneyder Avilán Rodríguez</h2>
+          <span className="image main">
+            <img src={brandonavilan} alt="" />
+          </span>
+          <p>
+            Mi nombre es Brandon Sneyder Avilán Rodríguez, soy estudiante de último semestre de Ingeniería de Sistemas y Computación.
+            Actualmente cuento con mas de un año de experiencia en desarrollo web, me encuentro laborando como desarrollador Front End 
+            en Slabcode S.A. Me gusta mucho la ingeniería de software, como el diseño UI y UX, considero que soy una persona comprometida,
+            a la cuál le gusta trabajar en equipo.
+          </p>
+          <p>
+            El proyecto más importante hasta ahora, es un proyecto de biometria para el registro y la validación de funcionarios y 
+            beneficiarios de la Policia Nacional, en el cual estuve a cargo del desarrollo del backend del mismo, como tambien del
+            administrador de dispositivos biometricos, para que estos puedan ser usados con peticiones http.
+          </p>
+          {close}
+        </article>
       </div>
     )
   }
