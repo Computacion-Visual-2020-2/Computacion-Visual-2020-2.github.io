@@ -62,6 +62,47 @@ class Main extends React.Component {
         </article>
 
         <article
+          id="julio-ovalle"
+          className={`${this.props.article === 'julio-ovalle' ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
+          style={{ display: 'none' }}
+        >
+          <h2 className="major">Julio Ovalle</h2>
+          <span className="image main">
+            <img src={julio} alt="" />
+          </span>
+          <p>
+            Mi nombre es Julio César Ovalle Lara , soy estudiante de último año de ingeniería
+            de sistemas y computación, de la Universidad Nacional de Colombia. Me apasiona el
+            desarrollo de software, en especial el desarrollo orientado a resolver problemas
+            a traves de sistemas inteligentes. Se me da muy bien el trabajo en equipo y me fascina
+            aprender nuevas cosas todos los dias. Si hay algo que no sepa lo voy a aprender!
+          </p>
+          <p>
+            A lo largo de mi vida academica he tenido la oportunidad de trabajar en varios
+            proyectos que me han enriquecido profesionalmente. En el año 2018 como proyecto final
+            de una asignatura de la carrera desarrolle una investigacion sobre machine learning
+            aplicado a la prediccion de ataques de epilepsia, como fruto de esa investigacion surgio
+            un paper el cual recientemente obtuvo aceptacion para publicacion. Durante el año 2020
+            he tenido la oortunidad de desempeñarme como desarrollador Full-Stack haciendo aplicaciones
+            a medida para empresas. Actualmente trabajo para la compañia RMP Services dando
+            soporte a empresas en el uso y mantenimiento de un servidor para transferencia de archivos.
+          </p>
+          <ul className="icons">
+            <li>
+              <a
+                href="https://github.com/jcovallel"
+                className="icon fa-github"
+              >
+                <span className="label">GitHub</span>
+              </a>
+            </li>
+          </ul>
+          {close}
+        </article>
+
+        <article
           id="work"
           className={`${this.props.article === 'work' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''

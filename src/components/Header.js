@@ -32,6 +32,24 @@ const Header = props => (
         <li>
           <button
             onClick={() => {
+              props.onOpenArticle('julio-ovalle')
+            }}
+          >
+            Julio Ovalle
+          </button>
+        </li>
+        <li>
+          <button
+            onClick={() => {
+              props.onOpenArticle('fabio-tovar')
+            }}
+          >
+            Fabio Tovar
+          </button>
+        </li>
+        <li>
+          <button
+            onClick={() => {
               props.onOpenArticle('work')
             }}
           >
@@ -45,16 +63,6 @@ const Header = props => (
             }}
           >
             About
-          </button>
-        </li>
-
-        <li>
-          <button
-            onClick={() => {
-              props.onOpenArticle('fabio-tovar')
-            }}
-          >
-            Fabio Tovar
           </button>
         </li>
       </ul>
