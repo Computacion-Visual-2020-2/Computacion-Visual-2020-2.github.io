@@ -269,6 +269,16 @@ class Main extends React.Component {
             beneficiarios de la Policia Nacional, en el cual estuve a cargo del desarrollo del backend del mismo, como tambien del
             administrador de dispositivos biometricos, para que estos puedan ser usados con peticiones http.
           </p>
+          <ul className="icons">
+            <li>
+              <a
+                href="https://github.com/BrandonAvilanR"
+                className="icon fa-github"
+              >
+                <span className="label">GitHub</span>
+              </a>
+            </li>
+          </ul>
           {close}
         </article>
       </div>
