@@ -14,7 +14,8 @@ const Header = props => (
           En este sitio encontrarás las actividades de la asignatura{' '}
           <a href="https://visualcomputing.github.io/">computación visual</a>
           <br />
-          desarrolladas por el equipo de estudiantes que se presentan a continuación.
+          desarrolladas por el equipo de estudiantes que se presentan a
+          continuación.
         </p>
       </div>
     </div>
