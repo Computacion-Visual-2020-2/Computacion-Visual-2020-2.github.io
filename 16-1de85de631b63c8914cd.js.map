@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/images/julio.jpg"],"names":["module","exports"],"mappings":"iFAAAA,EAAOC,QAAU,IAA0B","file":"16-1de85de631b63c8914cd.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/julio-d8bac89164cbfa974249325407a74109.jpg\";"],"sourceRoot":""}
