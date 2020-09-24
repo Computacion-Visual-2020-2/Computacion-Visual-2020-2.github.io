@@ -1,5 +1,5 @@
 import React from 'react'
-import P5Wrapper from 'react-p5-wrapper'
+import {loadableP5 as P5Wrapper} from '../../sketches/lodable';
 import convolution from '../../sketches/convolution'
 import Slider from 'react-rangeslider'
 
