@@ -6,9 +6,9 @@ class Convolution extends React.Component {
   render() {
     return (
       <>
-        <Suspense fallback={<div>Cargando...</div>}>
+        {/* <Suspense fallback={<div>Cargando...</div>}>
           <ConvolutionImage />
-        </Suspense>
+        </Suspense> */}
 
         <Suspense fallback={<div>Cargando...</div>}>
           <ConvolutionVideo />

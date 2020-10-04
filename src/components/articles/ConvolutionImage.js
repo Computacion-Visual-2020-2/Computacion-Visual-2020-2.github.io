@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import { loadableP5 as P5Wrapper } from '../../sketches/lodable'
 import Slider from 'react-rangeslider'
 import convolution from '../../sketches/convolution'
