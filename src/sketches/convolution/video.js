@@ -18,12 +18,11 @@ export default p5 => {
 
   p5.draw = function() {
     p5.image(fingers, 10, 10) // dibuja el cuadro del video en el lienzo.
-    p5.filter(p5.BLUR, kernel) 
+    p5.filter(p5.BLUR, kernel)
   }
 
   p5.myCustomRedrawAccordingToNewPropsHandler = function(props) {
-    if (props.kernel)
-      kernel = props.kernel
+    if (props.kernel && props.kernel != kernel) kernel = props.kernel
   }
 
   // reproduce o pausa el video dependiendo de su estado actual
