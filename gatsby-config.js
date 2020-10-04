@@ -19,5 +19,12 @@ module.exports = {
       },
     },
     'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-plugin-import',
+      options: {
+        libraryName: "antd",
+        style: true,   // or 'css'
+      }
+    },
   ],
 }
