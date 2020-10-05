@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { loadableP5 as P5Wrapper } from '../../sketches/lodable'
-import bw from '../../sketches/bw'
 import rgb_shader from '../../sketches/bw/rgb_shader'
-
-const { rgb, luma } = bw
+import luma_shader from '../../sketches/bw/luma_shader'
 
 const BNVideo = ({}) => {
   const [sketch, setSketch] = useState('rgb')
@@ -16,7 +14,7 @@ const BNVideo = ({}) => {
       </div>
 
       <div style={{ textAlign: 'center' }}>
-        <P5Wrapper sketch={sketch === 'rgb' ? rgb_shader : luma} />
+        <P5Wrapper sketch={sketch === 'rgb' ? rgb_shader : luma_shader} />
       </div>
     </>
   )

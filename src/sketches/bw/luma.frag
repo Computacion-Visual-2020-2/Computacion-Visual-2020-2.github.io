@@ -14,8 +14,8 @@ void main(){
   
   pxPosition.y=1.-pxPosition.y;
   
-  vec4 px = texture2D(tex0, pxPosition);
-  float avg = px.r + px.g + px.b;
+  vec4 px=texture2D(tex0,pxPosition);
+  float avg=px.r*.299+px.g*.587+px.b*.114;
   
-  gl_FragColor=vec4(vec3(avg), 1);
+  gl_FragColor=vec4(vec3(avg),1);
 }
