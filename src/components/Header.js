@@ -57,24 +57,17 @@ const Header = props => (
             Brandon Avilán
           </button>
         </li>
+
         <li>
           <button
-            onClick={() => {
-              props.onOpenArticle('work')
-            }}
+              onClick={() => {
+                props.onOpenArticle('Trabajos')
+              }}
           >
-            Work
+            Trabajos
           </button>
         </li>
-        <li>
-          <button
-            onClick={() => {
-              props.onOpenArticle('convolution')
-            }}
-          >
-            Convolución
-          </button>
-        </li>
+
         <li>
           <button
             onClick={() => {

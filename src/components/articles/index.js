@@ -1,9 +1,11 @@
 import React from 'react'
 import Convolution from './Convolution'
+import Trabajos from './Trabajos'
 
 export default [
   // CUSTOM ARTICLES
   { id: 'convolution', title: 'Convolution', body: () => <Convolution /> },
+  { id: 'Trabajos', title: 'TRABAJOS', body: () => <Trabajos /> },
 
   // TEAM ARTICLES
   {
