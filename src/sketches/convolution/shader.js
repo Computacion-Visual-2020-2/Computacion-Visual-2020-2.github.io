@@ -54,7 +54,7 @@ export default p5 => {
       if (Date.now() - start > 5000 && !saved) {
         const file = writeToFile(txt)
         console.log(file)
-        alert(file)
+        // alert(file)
         saved = true
       }
     }
