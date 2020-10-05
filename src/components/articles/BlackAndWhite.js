@@ -2,6 +2,7 @@ import React from 'react'
 import {loadableP5 as P5Wrapper} from '../../sketches/lodable';
 import filters from '../../sketches/bw'
 import Slider from 'react-rangeslider'
+import BNVideo from './BNVideo';
 
 class BlackAndWhite extends React.Component {
   constructor(props) {
@@ -54,6 +55,8 @@ class BlackAndWhite extends React.Component {
               />
             </div>
           </div>
+
+          <BNVideo />
       </div>
     )
   }

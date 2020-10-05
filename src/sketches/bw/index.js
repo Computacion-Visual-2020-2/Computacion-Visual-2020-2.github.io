@@ -1,13 +1,11 @@
-// import image from './image'
-// import kernels from './kernels'
-// import video from './video'
-// import shader from './shader'
-// import sketch from './sketch';
+import rgb from './rgb'
+import luma from './luma'
+import rgb_shader from './rgb_shader'
+// import luma_shader from './luma_shader'
 
-// export default {
-//   sketch,
-//   kernels,
-//   image,
-//   video,
-//   shader
-// }
+export default {
+  rgb,
+  luma,
+  rgb_shader,
+  // luma_shader
+}
