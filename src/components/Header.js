@@ -71,6 +71,26 @@ const Header = props => (
         <li>
           <button
               onClick={() => {
+                props.onOpenArticle('BlackAndWhite')
+              }}
+          >
+            B/N
+          </button>
+        </li>
+
+        <li>
+          <button
+              onClick={() => {
+                props.onOpenArticle('histogram')
+              }}
+          >
+            Histograma
+          </button>
+        </li>
+
+        <li>
+          <button
+              onClick={() => {
                 props.onOpenArticle('Trabajos')
               }}
           >
