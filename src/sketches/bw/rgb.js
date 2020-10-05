@@ -1,5 +1,5 @@
 import bomba from 'file-loader!../../videos/bomba.mov'
-import { convolution, writeToFile, applyFilter } from '../util'
+import { rgb, writeToFile, applyFilter } from '../util'
 
 const CHANNELS = 4
 
@@ -35,7 +35,7 @@ export default p5 => {
         fingers.height,
         kernel,
         CHANNELS,
-        convolution
+        rgb
       )
       p5.updatePixels()
       const after = Date.now()
