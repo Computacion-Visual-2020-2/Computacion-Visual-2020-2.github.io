@@ -1,4 +1,6 @@
-import fabio from '../../images/fabiotovar.png'
+import unal from '../../images/fabiotovar.png'
+
+const CHANNELS = 4
 
 function convolution(p5, x, y, matrix, img, channels) {
   let matrixsize = matrix.length,
@@ -26,8 +28,6 @@ function convolution(p5, x, y, matrix, img, channels) {
   return color
 }
 
-const CHANNELS = 4
-
 export default p5 => {
   let img, img2, matrix, lastKernel
 
@@ -51,7 +51,7 @@ export default p5 => {
   }
 
   p5.preload = () => {
-    img = p5.loadImage(fabio)
+    img = p5.loadImage(unal)
   }
 
   p5.setup = () => {

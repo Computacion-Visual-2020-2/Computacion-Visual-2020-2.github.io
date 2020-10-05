@@ -1,34 +1,31 @@
 import bomba from 'file-loader!../../videos/bomba.mov'
-import kernels from './kernels'
 import { applyFilter } from './utils'
 
 const CHANNELS = 4
 
 export default p5 => {
-  let playing = false,
+  let playing = true,
     fingers,
     button,
-    kernel = 3,
+    kernel,
     canvas,
     preloaded = false
 
   p5.preload = () => {
     fingers = p5.createVideo(bomba, () => {
       preloaded = true
+      fingers.loop()
     })
   }
 
   p5.setup = () => {
-    button = p5.createButton('play')
-    button.mousePressed(toggleVid)
   }
 
   p5.draw = function() {
-    if (fingers !== undefined && fingers.width > 1 && canvas) {
+    if (fingers !== undefined && fingers.width > 1 && canvas && kernel) {
       p5.image(fingers, 0, 0)
       p5.loadPixels()
-      const pixels = p5.pixels
-      p5.pixels = applyFilter(pixels, fingers.width, fingers.height, kernels[0].kernel(), CHANNELS)
+      p5.pixels = applyFilter(p5.pixels, fingers.width, fingers.height, kernel, CHANNELS)
       p5.updatePixels()
     } else if(!canvas && preloaded) {
       canvas = p5.createCanvas(fingers.width, fingers.height)
@@ -36,7 +33,12 @@ export default p5 => {
   }
 
   p5.myCustomRedrawAccordingToNewPropsHandler = function(props) {
-    if (props.kernel && props.kernel != kernel) kernel = props.kernel
+    if (props.kernel) {
+      kernel = props.kernel
+      console.log(kernel)
+      fingers.time(0)
+      fingers.loop()
+    }
   }
 
   function toggleVid() {
