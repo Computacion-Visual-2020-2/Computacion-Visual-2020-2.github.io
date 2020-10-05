@@ -1,22 +1,18 @@
 import React from 'react'
 import {loadableP5 as P5Wrapper} from '../../sketches/lodable';
-import filters from '../../sketches/bw'
+import filters from '../../sketches/bw/sketch'
 import Slider from 'react-rangeslider'
 
 class BlackAndWhite extends React.Component {
   constructor(props) {
     super(props);
 
-    this.sketch = filters.sketch
+    this.sketch = filters
 
     this.state = { value: 0, add: true, prev: 0 };
 
     this.handleSliderChange = this.handleSliderChange.bind(this)
   }
-
-  // handleSliderCompleted() {
-  //   this.setState({ value: this.state.value, add: this.state.add, prev: this.state.prev })
-  // }
 
   handleSliderChange(value) {
     let prev = this.state.value;
