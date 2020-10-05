@@ -11,8 +11,8 @@ export default p5 => {
 
   p5.setup = () => {
     p5.createCanvas(1688, 750);
+    p5.background(p5.color(80, 80, 80));
     p5.image(img, 0 , 0);
-
       // Calculate the histogram
     for (let i = 0; i < img.width; i++) {
       for (let j = 0; j < img.height; j++) {
@@ -20,7 +20,6 @@ export default p5 => {
         hist[r]++;
       } 
     }
-  
         
     // Find the largest value in the histogram
     histMax = p5.max(hist);
@@ -96,12 +95,12 @@ export default p5 => {
 
     init=cluster_positions[0].inicio;
 
-    console.log(cluster_positions);
-    console.log(init);
+    // console.log(cluster_positions);
+    // console.log(init);
 
     for(let j=0; j<numclusters; j++){
       counter++;
-      console.log(j%clusterSize2 === clusterSize2-1, j%clusterSize2 ,clusterSize2-1);
+      // console.log(j%clusterSize2 === clusterSize2-1, j%clusterSize2 ,clusterSize2-1);
       if(j%clusterSize2 === clusterSize2-1){
         end = cluster_positions[j].fin;
         colores += cluster_positions[j].mycolor;
@@ -123,7 +122,7 @@ export default p5 => {
       let nclus = new Cluster(newCluster[ncindex-1]?.inicio ,255,(newCluster[ncindex-1]?.mycolor+(colores/counter))/2);
       newCluster[ncindex-1]=nclus;
     }
-    console.log(newCluster);
+    // console.log(newCluster);
     // pg = p5.createCanvas(558, 750);
     // pg.beginDraw();
     img2.loadPixels();
@@ -140,7 +139,7 @@ export default p5 => {
         }
       }
     }
-    console.log('done');
+    // console.log('done');
     img2.updatePixels();
     p5.image(img2, 1130, 0);
     // p5.image(img2, 0, 0);
