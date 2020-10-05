@@ -1,5 +1,6 @@
 import bomba from 'file-loader!../../videos/bomba.mov'
-import { applyFilter } from './utils'
+import { writeToFile } from '../util'
+import { applyFilter } from './util'
 
 const CHANNELS = 4
 
@@ -18,16 +19,39 @@ export default p5 => {
     })
   }
 
-  p5.setup = () => {
-  }
+  p5.setup = () => {}
+
+  let start = -1,
+    txt = '',
+    saved = false
 
   p5.draw = function() {
     if (fingers !== undefined && fingers.width > 1 && canvas && kernel) {
+      if (start < 0) start = Date.now()
+
+      const before = Date.now()
       p5.image(fingers, 0, 0)
       p5.loadPixels()
-      p5.pixels = applyFilter(p5.pixels, fingers.width, fingers.height, kernel, CHANNELS)
+      p5.pixels = applyFilter(
+        p5.pixels,
+        fingers.width,
+        fingers.height,
+        kernel,
+        CHANNELS
+      )
       p5.updatePixels()
-    } else if(!canvas && preloaded) {
+      const after = Date.now()
+
+      if (Date.now() - start < 5000)
+        txt = txt.concat(`${after - start}, ${after - before}\n`)
+
+      if (Date.now() - start > 5000 && !saved) {
+        const file = writeToFile(txt)
+        console.log(file)
+        alert(file)
+        saved = true
+      }
+    } else if (!canvas && preloaded) {
       canvas = p5.createCanvas(fingers.width, fingers.height)
     }
   }
@@ -39,16 +63,5 @@ export default p5 => {
       fingers.time(0)
       fingers.loop()
     }
-  }
-
-  function toggleVid() {
-    if (playing) {
-      fingers.pause()
-      button.html('play')
-    } else {
-      fingers.loop()
-      button.html('pause')
-    }
-    playing = !playing
   }
 }
