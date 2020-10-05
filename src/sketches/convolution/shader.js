@@ -1,6 +1,7 @@
 import convolutionFrag from 'file-loader!./convolution.frag'
 import convolutionVert from 'file-loader!./convolution.vert'
 import bomba from 'file-loader!../../videos/bomba.mov'
+import { writeToFile } from '../util'
 
 export default p5 => {
   let shader,
@@ -31,13 +32,31 @@ export default p5 => {
     p5.noStroke()
   }
 
+  let start = -1,
+    txt = '',
+    saved = false
+
   p5.draw = () => {
     if (canvas && kernel) {
+      if (start < 0) start = Date.now()
+
+      const before = Date.now()
       p5.shader(shader)
       shader.setUniform('kernel', kernel)
       shader.setUniform('textureSize', [p5.width, p5.height])
       shader.setUniform('tex0', fingers)
       p5.rect(0, 0, p5.width, p5.height)
+      const after = Date.now()
+
+      if (after - start < 5000)
+        txt = txt.concat(`${after - start}, ${after - before}\n`)
+
+      if (Date.now() - start > 5000 && !saved) {
+        const file = writeToFile(txt)
+        console.log(file)
+        alert(file)
+        saved = true
+      }
     }
   }
 
