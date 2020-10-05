@@ -1,9 +1,8 @@
-import React, { Suspense, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import kernels from '../../sketches/convolution/kernels'
 import Slider from 'react-rangeslider'
-
-const ConvolutionVideo = React.lazy(() => import('./ConvolutionVideo'))
-const ConvolutionImage = React.lazy(() => import('./ConvolutionImage'))
+import ConvolutionVideo from './ConvolutionVideo'
+import ConvolutionImage from './ConvolutionImage'
 
 const Convolution = () => {
   const [kernel, setKernel] = useState(kernels[0])
@@ -53,13 +52,9 @@ const Convolution = () => {
         </div>
       )}
 
-      <Suspense fallback={<div>Cargando...</div>}>
-        <ConvolutionImage kernel={kernel} kernelSize={kernelSize} />
-      </Suspense>
+      <ConvolutionImage kernel={kernel} kernelSize={kernelSize} />
 
-      <Suspense fallback={<div>Cargando...</div>}>
-        <ConvolutionVideo kernel={kernel} kernelSize={kernelSize} />
-      </Suspense>
+      <ConvolutionVideo kernel={kernel} kernelSize={kernelSize} />
     </>
   )
 }
