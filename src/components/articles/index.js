@@ -1,9 +1,14 @@
 import React from 'react'
 import Convolution from './Convolution'
 import Trabajos from './Trabajos'
+import Histogram from './Histogram'
+import BlackAndWhite from './BlackAndWhite'
 
 export default [
   // CUSTOM ARTICLES
+  // { id: 'convolution', title: 'Convolution', body: () => <Convolution /> },
+  { id: 'histogram', title: 'Histogram', body: () => <Histogram /> },
+  { id: 'BlackAndWhite', title: 'BlackAndWhite', body: () => <BlackAndWhite /> },
   { id: 'convolution', title: 'Convolution', body: () => <Convolution /> },
   { id: 'Trabajos', title: 'TRABAJOS', body: () => <Trabajos /> },
 
