@@ -5,6 +5,7 @@ import Slider from 'react-rangeslider'
 import { Accordion, AccordionItem } from 'react-light-accordion';
 //import 'react-light-accordion/demo/css/index.css';
 import DemoInforme from '../../sketches/Demo-Informe/Demo-Informe'
+import { Link } from 'gatsby'
 
 function Trabajos() {
     const [demo1, setDemo1] = useState(false)
@@ -57,32 +58,9 @@ function Trabajos() {
             <Accordion atomic={true}>
 
                 <AccordionItem title="Escala de grises: promedio rgb y luma">
-                    <li style={{ paddingLeft: '18px', cursor: 'pointer' }}><a onClick={switchInfo} id="1"> Informe </a></li>
-                    <li style={{ paddingLeft: '18px', cursor: 'pointer' }}><a onClick={switchDemo} id="1"> Demo </a></li>
+                <Link to="/page-2">Taller 1</Link>
                 </AccordionItem>
 
-                <AccordionItem title="Máscaras de convolución">
-                    <li style={{ paddingLeft: '18px', cursor: 'pointer' }}><a onClick={switchInfo} id="2"> Informe </a></li>
-                    {
-                        informe2 &&
-                        <DemoInforme text={'ejemplo 1'}/>
-                    }
-                    <li style={{ paddingLeft: '18px', cursor: 'pointer' }}><a onClick={switchDemo} id="2"> Demo </a></li>
-                    {
-                        demo2 &&
-                        <DemoInforme text={'titulo'} imagen={"https://sites.google.com/site/mate02trucha/_/rsrc/1472875957853/config/google_.jpg"}/>
-                    }
-                </AccordionItem>
-
-                <AccordionItem title="Histograma y Segmentación">
-                    <li style={{ paddingLeft: '18px', cursor: 'pointer' }}><a onClick={switchInfo} id="1"> Informe </a></li>
-                    <li style={{ paddingLeft: '18px', cursor: 'pointer' }}><a onClick={switchDemo} id="1"> Demo </a></li>
-                </AccordionItem>
-
-                <AccordionItem title="Medición de la eficiencia computacional (Video)">
-                    <li style={{ paddingLeft: '18px', cursor: 'pointer' }}><a onClick={switchInfo} id="1"> Informe </a></li>
-                    <li style={{ paddingLeft: '18px', cursor: 'pointer' }}><a onClick={switchDemo} id="1"> Demo </a></li>
-                </AccordionItem>
 
             </Accordion>
         </div>
