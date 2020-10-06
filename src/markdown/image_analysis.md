@@ -18,8 +18,34 @@ Emplear dos canvas, uno para desplegar la imagen/video original y el otro para e
 ### Medición de la eficiencia computacional para las operaciones realizadas.
 
 #### Conversión a escala de grises
+En fotografía, computación y colorimetría, una escala de grises es aquella en la que el valor de cada píxel es una sola muestra que representa solo una cantidad de luz, es decir, solo transporta información de intensidad. Las imágenes de este tipo, también conocidas como blanco y negro o monocromáticas, están compuestas exclusivamente por tonos de gris, que varían desde el negro en la intensidad más débil hasta el blanco en el más fuerte.
 
+Hoy las imágenes en escala de grises (como las fotografías) destinadas a la visualización (tanto en pantalla como impresas) se almacenan comúnmente con 8 bits por píxel muestreado. Esta profundidad de píxeles permite registrar 256 intensidades diferentes (es decir, tonos de gris) y también simplifica el cálculo ya que se puede acceder a cada muestra de píxeles individualmente como un byte completo.
 
+La conversión de una imagen de color arbitraria a escala de grises no es única en general, existen diversas tecnicas que abordan este problema de diferentes formas, para el caso de estudio actual se usara el metodo de conversion por promedio rgb y el metodo luma.
+
+#####Promedio RGB
+Este metodo consiste simplemente en asignar a cada pixel el valor correspondiente al promedio de sus canales RGB. Sin embargo ya que este metodo no toma ninguna otra consideracion fuera de la intensidad de color   
+es comun que los resultados no sean muy precisos al representar las sombras o luminosidad de la imagen original. 
+
+#####Luma
+Este metodo se basa en el hecho de que el ojo humano es mas sensible a unas frecuencias de luz que a otras, en particular el ojo humano es mas sensible a la luz verde, un poco menos a la luz roja y un poco menos a la azul. 
+El metodo consiste en un promedio ponderarado de los canales RGB, el peso asignado a cada canal se da de acuerdo a la sensibilidad del ojo a ese canal, es decir el peso del canal verde sera mayor que el del canal rojo y azul. Concretamente los pesos son:
+0.587 para el canal verde, 0.2999 para el canal rojo y 0.114 para el canal azul.
+
+#####Comparativa promedio vs luma
+
+######Imagen Original
+
+![Imagen Original](https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/0bf40b82d9d9ea96ccbc12bd3777dfa45178b888/src/sketches/convolution/results/pimientos.jpg?raw=true)
+
+######Aplicando promedio RGB
+
+![Imagen Promedio RGB](https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/0bf40b82d9d9ea96ccbc12bd3777dfa45178b888/src/sketches/convolution/results/promedio.png?raw=true)
+
+#####Luma
+
+![Imagen Luma](https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/0bf40b82d9d9ea96ccbc12bd3777dfa45178b888/src/sketches/convolution/results/luma.png?raw=true)
 
 #### Convolución
 
