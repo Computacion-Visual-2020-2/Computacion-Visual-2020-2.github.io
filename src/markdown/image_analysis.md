@@ -24,28 +24,30 @@ Hoy las imágenes en escala de grises (como las fotografías) destinadas a la vi
 
 La conversión de una imagen de color arbitraria a escala de grises no es única en general, existen diversas tecnicas que abordan este problema de diferentes formas, para el caso de estudio actual se usara el metodo de conversion por promedio rgb y el metodo luma.
 
-#####Promedio RGB
+#### Promedio RGB
 Este metodo consiste simplemente en asignar a cada pixel el valor correspondiente al promedio de sus canales RGB. Sin embargo ya que este metodo no toma ninguna otra consideracion fuera de la intensidad de color   
 es comun que los resultados no sean muy precisos al representar las sombras o luminosidad de la imagen original. 
 
-#####Luma
+##### Luma
 Este metodo se basa en el hecho de que el ojo humano es mas sensible a unas frecuencias de luz que a otras, en particular el ojo humano es mas sensible a la luz verde, un poco menos a la luz roja y un poco menos a la azul. 
 El metodo consiste en un promedio ponderarado de los canales RGB, el peso asignado a cada canal se da de acuerdo a la sensibilidad del ojo a ese canal, es decir el peso del canal verde sera mayor que el del canal rojo y azul. Concretamente los pesos son:
 0.587 para el canal verde, 0.2999 para el canal rojo y 0.114 para el canal azul.
 
-#####Comparativa promedio vs luma
+##### Comparativa promedio vs luma
 
-######Imagen Original
+###### Imagen Original
 
 ![Imagen Original](https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/convolution/src/sketches/bw/pimientos.jpg?raw=true)
 
-######Aplicando promedio RGB
+###### Aplicando promedio RGB
 
 ![Imagen Promedio RGB](https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/convolution/src/sketches/bw/promedio.PNG?raw=true)
 
-#####Aplicando Luma
+##### Aplicando Luma
 
 ![Imagen Luma](https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/convolution/src/sketches/bw/luma.PNG?raw=true)
+
+Como se puede ver en las imagenes anteriores, luma capta de mejor manera el brillo de los colores, esto se puede ver en espacial en el color amarillo y en algunos tonos de verde.
 
 #### Convolución
 
