@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[21],{DXfF:function(c,p,e){c.exports=e.p+"static/test2-9f15d00cbe9b1389c08840bd839ecec6.png"}}]);
-//# sourceMappingURL=21-5616df1c2ca1ed488f75.js.map

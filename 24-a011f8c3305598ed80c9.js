@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[24],{"x/Ru":function(a,n,p){a.exports=p.p+"static/unal-538fefaa8e0b35278a8849d4ea1611c5.png"}}]);
+//# sourceMappingURL=24-a011f8c3305598ed80c9.js.map

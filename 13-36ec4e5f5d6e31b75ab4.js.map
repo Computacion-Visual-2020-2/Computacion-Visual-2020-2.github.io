@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/images/fabiotovar.png"],"names":["module","exports"],"mappings":"+EAAAA,EAAOC,QAAU,IAA0B","file":"13-36ec4e5f5d6e31b75ab4.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/fabiotovar-c538ef48546a779f7df4f5ceeaa21f56.png\";"],"sourceRoot":""}
