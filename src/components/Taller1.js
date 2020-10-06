@@ -90,41 +90,8 @@ const Taller1 = props => (
                 <p>
                 GPU: NVIDIA Corporation GP107GLM [Quadro P2000 Mobile]
                 </p>
-                
+
         </div>
-        <nav>
-            <ul>
-                <li>
-                    <button
-                        onClick={() => {
-                            props.onOpenArticle('convolution')
-                        }}
-                    >
-                        Convolución
-          </button>
-                </li>
-
-                <li>
-                    <button
-                        onClick={() => {
-                            props.onOpenArticle('BlackAndWhite')
-                        }}
-                    >
-                        B/N
-          </button>
-                </li>
-
-                <li>
-                    <button
-                        onClick={() => {
-                            props.onOpenArticle('histogram')
-                        }}
-                    >
-                        Histograma
-          </button>
-                </li>
-            </ul>
-        </nav>
     </header>
 )
 Taller1.propTypes = {

@@ -57,14 +57,15 @@ const Header = props => (
             Brandon Avilán
           </button>
         </li>
-
-        
-
+      </ul>
+    </nav>
+    <nav>
+      <ul>
         <li>
           <button
-              onClick={() => {
-                props.onOpenArticle('Trabajos')
-              }}
+            onClick={() => {
+              props.onOpenArticle('Trabajos')
+            }}
           >
             Trabajos
           </button>
@@ -77,6 +78,39 @@ const Header = props => (
             }}
           >
             About
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <nav>
+      <ul>
+        <li>
+          <button
+            onClick={() => {
+              props.onOpenArticle('convolution')
+            }}
+          >
+            Convolución
+          </button>
+        </li>
+
+        <li>
+          <button
+            onClick={() => {
+              props.onOpenArticle('BlackAndWhite')
+            }}
+          >
+            B/N
+          </button>
+        </li>
+
+        <li>
+          <button
+            onClick={() => {
+              props.onOpenArticle('histogram')
+            }}
+          >
+            Histograma
           </button>
         </li>
       </ul>
