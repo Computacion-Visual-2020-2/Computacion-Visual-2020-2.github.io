@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/images/original.jpeg"],"names":["module","exports"],"mappings":"+EAAAA,EAAOC,QAAU,IAA0B","file":"23-14722b1cb701a68f16d2.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/original-a90dd2acc5aacf27c4ba32da7ec60743.jpeg\";"],"sourceRoot":""}
