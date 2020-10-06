@@ -61,11 +61,11 @@ const Taller1 = props => (
             <img src={luma} alt="Luma" />
             <br />
             <p>
-            Como se puede ver en las imagenes anteriores, luma capta de mejor manera el brillo de los colores, esto se puede ver en espacial en el color amarillo y en algunos tonos de verde.
+                Como se puede ver en las imagenes anteriores, luma capta de mejor manera el brillo de los colores, esto se puede ver en espacial en el color amarillo y en algunos tonos de verde.
             </p>
-            </div>
-            <div className='content'>
-                <br />
+        </div>
+        <div className='content'>
+            <br />
             <h3>
                 Convolución
                 </h3>
@@ -87,11 +87,58 @@ const Taller1 = props => (
             <p>
                 Procesador: Intel Core i7-8850H (2.6 GHz - 12 núcleos)
                 </p>
-                <p>
+            <p>
                 GPU: NVIDIA Corporation GP107GLM [Quadro P2000 Mobile]
                 </p>
-
+            <p>
+                Este es el video procesado con el kernel identidad directamente con p5.js, implicando que el procesamiento se realiza sobre la CPU de la máquina:
+            </p>
+            <img src={'https://media.giphy.com/media/WcGVHOeuuJpPZSzGaS/giphy.gif'} alt="p5..." />
+            <p>
+            Ahora, viendo el mismo video e implementando el mismo algoritmo pero modificado de manera tal que pueda ejecutarse como un shader sobre el video, es decir, haciendo los cálculos sobre la GPU, obtenemos lo siguiente:
+            </p>
+            <img src={'https://media.giphy.com/media/PFIEJC7KVdlcilM5aL/giphy.gif'} alt="shader..." />
+            <p>
+            Es evidente en la primer grabación de la reproducción del video cómo el video de la derecha tiene un ligero retraso, quizás no es muy evidente desde una máquina potente como en la cual se está realizando esta comparación, pero seguramente en otra máquina con un procesador más modesto esta diferencia se marcaría mucho más. Por otro lado, tenemos el gran contraste del excelente rendimiento del shader, donde los videos de la izquierda y la derecha se ejecutan con sincronía total para el ojo humano.
+            </p>
+            <p>
+            Por último, se realizó esta gráfica en la cual se ve la comparación del tiempo que se toma el programa en p5.js ejecutando la función draw(), la cual se encarga del renderizado del video. Se puede corroborar cómo usando GLSL (OpenGL Shading Language) el renderizado es (casi) instantáneo, mientras que haciendo la convolución directamente en p5.js toma más de 100 veces más de tiempo.
+            </p>
+            <img src={'https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/0bf40b82d9d9ea96ccbc12bd3777dfa45178b888/src/sketches/convolution/results/plot.png?raw=true'} />
         </div>
+        <nav>
+            <ul>
+                <li>
+                    <button
+                        onClick={() => {
+                            props.onOpenArticle('convolution')
+                        }}
+                    >
+                        Convolución
+          </button>
+                </li>
+
+                <li>
+                    <button
+                        onClick={() => {
+                            props.onOpenArticle('BlackAndWhite')
+                        }}
+                    >
+                        B/N
+          </button>
+                </li>
+
+                <li>
+                    <button
+                        onClick={() => {
+                            props.onOpenArticle('histogram')
+                        }}
+                    >
+                        Histograma
+          </button>
+                </li>
+            </ul>
+        </nav>
     </header>
 )
 Taller1.propTypes = {
