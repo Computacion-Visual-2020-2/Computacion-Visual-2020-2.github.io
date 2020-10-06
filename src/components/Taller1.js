@@ -7,9 +7,9 @@ import luma from '../images/luma.jpeg'
 
 const Taller1 = props => (
     <header id="header" >
+        <h2>Taller de análisis de imágenes por software</h2>
         <div className='content'>
             <br></br>
-            <h2>Taller de análisis de imágenes por software</h2>
             <h3>Propósito</h3>
             <p>Introducir el análisis de imágenes/video al implementar las siguientes operaciones de análisis para imágenes/video tanto por software como por hardware (empleando shaders):</p>
             <h3>Tareas:</h3>

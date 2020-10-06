@@ -60,44 +60,30 @@ const Header = props => (
 
         <li>
           <button
-              onClick={() => {
-                props.onOpenArticle('convolution')
-              }}
+            onClick={() => {
+              props.onOpenArticle('convolution')
+            }}
           >
             Convolución
           </button>
         </li>
-
+      </ul>
+    </nav>
+    <nav>
+      <ul>
         <li>
           <button
-              onClick={() => {
-                props.onOpenArticle('BlackAndWhite')
-              }}
-          >
-            B/N
-          </button>
-        </li>
-
-        <li>
-          <button
-              onClick={() => {
-                props.onOpenArticle('histogram')
-              }}
-          >
-            Histograma
-          </button>
-        </li>
-
-        <li>
-          <button
-              onClick={() => {
-                props.onOpenArticle('Trabajos')
-              }}
+            onClick={() => {
+              props.onOpenArticle('Trabajos')
+            }}
           >
             Trabajos
           </button>
         </li>
-
+      </ul>
+    </nav>
+    <nav>
+      <ul>
         <li>
           <button
             onClick={() => {
@@ -109,6 +95,8 @@ const Header = props => (
         </li>
       </ul>
     </nav>
+
+
   </header>
 )
 

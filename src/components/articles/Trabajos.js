@@ -57,7 +57,6 @@ function Trabajos() {
             <h3>Taller 1</h3>
             <Accordion atomic={true}>
 
-                <AccordionItem title="Escala de grises: promedio rgb y luma">
                 <Link to="/page-2">Taller 1</Link>
                 </AccordionItem>
 
