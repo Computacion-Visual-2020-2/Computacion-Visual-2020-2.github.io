@@ -37,15 +37,15 @@ El metodo consiste en un promedio ponderarado de los canales RGB, el peso asigna
 
 ######Imagen Original
 
-![Imagen Original](https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/0bf40b82d9d9ea96ccbc12bd3777dfa45178b888/src/sketches/convolution/results/pimientos.jpg?raw=true)
+![Imagen Original](https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/convolution/src/sketches/bw/pimientos.jpg?raw=true)
 
 ######Aplicando promedio RGB
 
-![Imagen Promedio RGB](https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/0bf40b82d9d9ea96ccbc12bd3777dfa45178b888/src/sketches/convolution/results/promedio.png?raw=true)
+![Imagen Promedio RGB](https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/convolution/src/sketches/bw/promedio.PNG?raw=true)
 
-#####Luma
+#####Aplicando Luma
 
-![Imagen Luma](https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/0bf40b82d9d9ea96ccbc12bd3777dfa45178b888/src/sketches/convolution/results/luma.png?raw=true)
+![Imagen Luma](https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/convolution/src/sketches/bw/luma.PNG?raw=true)
 
 #### Convolución
 
