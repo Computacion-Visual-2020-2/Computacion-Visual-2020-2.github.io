@@ -56,11 +56,7 @@ function Trabajos() {
             <p>En esta seccion encontrara todo los talleres y trabajos de la asignatura.</p>
             <h3>Taller 1</h3>
             <Accordion atomic={true}>
-
                 <Link to="/page-2">Taller 1</Link>
-                </AccordionItem>
-
-
             </Accordion>
         </div>
     )

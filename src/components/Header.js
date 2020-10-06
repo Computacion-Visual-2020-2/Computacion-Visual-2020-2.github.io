@@ -58,32 +58,18 @@ const Header = props => (
           </button>
         </li>
 
+        
+
         <li>
           <button
-            onClick={() => {
-              props.onOpenArticle('convolution')
-            }}
-          >
-            Convolución
-          </button>
-        </li>
-      </ul>
-    </nav>
-    <nav>
-      <ul>
-        <li>
-          <button
-            onClick={() => {
-              props.onOpenArticle('Trabajos')
-            }}
+              onClick={() => {
+                props.onOpenArticle('Trabajos')
+              }}
           >
             Trabajos
           </button>
         </li>
-      </ul>
-    </nav>
-    <nav>
-      <ul>
+
         <li>
           <button
             onClick={() => {
@@ -95,8 +81,6 @@ const Header = props => (
         </li>
       </ul>
     </nav>
-
-
   </header>
 )
 

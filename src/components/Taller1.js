@@ -60,6 +60,9 @@ const Taller1 = props => (
                 </h4>
             <img src={luma} alt="Luma" />
             <br />
+            <p>
+            Como se puede ver en las imagenes anteriores, luma capta de mejor manera el brillo de los colores, esto se puede ver en espacial en el color amarillo y en algunos tonos de verde.
+            </p>
             </div>
             <div className='content'>
                 <br />
@@ -87,6 +90,7 @@ const Taller1 = props => (
                 <p>
                 GPU: NVIDIA Corporation GP107GLM [Quadro P2000 Mobile]
                 </p>
+                
         </div>
         <nav>
             <ul>
