@@ -12,8 +12,6 @@ function MarkdownRender(props) {
       ...props.renderers,
       text: props => <MathJax.Text text={props.value} />,
       html: props => <div dangerouslySetInnerHTML={{ __html: props.value }} />,
-      // math: props => <MathJax.Node>{props.value}</MathJax.Node>,
-      // inlineMath: props => <MathJax.Node inline>{props.value}</MathJax.Node>,
     },
   }
 

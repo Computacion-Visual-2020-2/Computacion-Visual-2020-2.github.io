@@ -46,7 +46,6 @@ export default p5 => {
       if (Date.now() - start > 5000 && !saved) {
         const file = writeToFile(txt)
         console.log(file)
-        // alert(file)
         saved = true
       }
     } else if (!canvas && preloaded) {
@@ -57,9 +56,10 @@ export default p5 => {
   p5.myCustomRedrawAccordingToNewPropsHandler = function(props) {
     if (props.kernel) {
       kernel = props.kernel
-      console.log(kernel)
-      fingers.time(0)
-      fingers.loop()
+      if(fingers) {
+        fingers.time(0)
+        fingers.loop()
+      }
     }
   }
 }

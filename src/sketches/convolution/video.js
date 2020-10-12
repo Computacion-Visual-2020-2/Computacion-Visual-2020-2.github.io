@@ -57,9 +57,10 @@ export default p5 => {
   p5.myCustomRedrawAccordingToNewPropsHandler = function(props) {
     if (props.kernel) {
       kernel = props.kernel
-      console.log(kernel)
-      fingers.time(0)
-      fingers.loop()
+      if (fingers) {
+        fingers.time(0)
+        fingers.loop()
+      }
     }
   }
 }
