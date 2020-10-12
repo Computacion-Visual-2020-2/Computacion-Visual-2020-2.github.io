@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
-import Taller1 from '../components/taller1'
+import Taller1 from '../components/Taller1'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
 
