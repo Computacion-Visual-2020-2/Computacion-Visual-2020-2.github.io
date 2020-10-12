@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/images/perro.jpg"],"names":["module","exports"],"mappings":"+EAAAA,EAAOC,QAAU,IAA0B","file":"17-eb2e4653889667703de4.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/perro-d8b80663b8dd39c15f06938b104302ff.jpg\";"],"sourceRoot":""}

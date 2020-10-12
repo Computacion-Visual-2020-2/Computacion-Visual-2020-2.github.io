@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/images/c2.jpeg"],"names":["module","exports"],"mappings":"iFAAAA,EAAOC,QAAU,IAA0B","file":"15-fabbc93112253cfd4e04.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/c2-ec9c56c621b97cb2fd22150db1617229.jpeg\";"],"sourceRoot":""}

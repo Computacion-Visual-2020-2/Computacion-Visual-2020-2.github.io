@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[23],{zLwg:function(a,c,p){a.exports=p.p+"static/original-a90dd2acc5aacf27c4ba32da7ec60743.jpeg"}}]);
-//# sourceMappingURL=23-14722b1cb701a68f16d2.js.map
