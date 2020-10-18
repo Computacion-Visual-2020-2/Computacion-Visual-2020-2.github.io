@@ -5,13 +5,11 @@ import Markdown from './Markdown'
 
 const Taller1 = props => {
   const [markdown, setMarkdown] = useState()
-    useEffect(() => {
-      fetch(imageAnalysis)
-        .then(txt => txt.text())
-        .then(txt => setMarkdown(txt))
-    })
-
-//   setMarkdown(test)
+  useEffect(() => {
+    fetch(imageAnalysis)
+      .then(txt => txt.text())
+      .then(txt => setMarkdown(txt))
+  })
 
   return (
     <>

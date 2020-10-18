@@ -6,9 +6,7 @@ import { writeToFile } from '../util'
 export default p5 => {
   let shader,
     fingers,
-    canvas,
-    button,
-    playing = true
+    canvas
 
   p5.preload = () => {
     shader = p5.loadShader(convolutionVert, convolutionFrag)
