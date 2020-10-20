@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import articles from './articles'
 
 const Taller2 = props => {
   return (
@@ -7,25 +8,17 @@ const Taller2 = props => {
       <header id="header">
         <nav>
           <ul>
-            <li>
-              <button
-                onClick={() => {
-                  props.onOpenArticle('contrast-gain-control')
-                }}
-              >
-                Contrast Gain Control
-              </button>
-            </li>
-
-            <li>
-              <button
-                onClick={() => {
-                  props.onOpenArticle('oblique-grating')
-                }}
-              >
-                Oblique Grating
-              </button>
-            </li>
+            {articles['visual-illusions'].map(article => (
+              <li key={`li_${article.id}`}>
+                <button
+                  onClick={() => {
+                    props.onOpenArticle(article.id)
+                  }}
+                >
+                  {article.title}
+                </button>
+              </li>
+            ))}
           </ul>
         </nav>
       </header>
