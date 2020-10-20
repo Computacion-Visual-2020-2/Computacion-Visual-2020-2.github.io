@@ -101,6 +101,7 @@ class IndexPage extends React.Component {
               article={this.state.article}
               onCloseArticle={this.handleCloseArticle}
               setWrapperRef={this.setWrapperRef}
+              dialogMode
             />
             <Footer timeout={this.state.timeout} />
           </div>

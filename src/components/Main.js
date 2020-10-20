@@ -16,7 +16,7 @@ class Main extends React.Component {
     )
 
     this.state = {
-      articles,
+      articles: articles[window.location.pathname.replaceAll('/', '')],
     }
   }
 
@@ -29,14 +29,15 @@ class Main extends React.Component {
     }
   }
 
-  render() {
-    return (
-      <div
-        ref={this.props.setWrapperRef}
-        id="main"
-        style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
-      >
-        {this.state.articles.map(article => (
+  renderArticle(article) {
+    if (this.props.dialogMode) {
+      return (
+        <div
+        key={`art_${article.id}`}
+          ref={this.props.setWrapperRef}
+          id="main"
+          style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
+        >
           <article
             id={article.id}
             key={article.id}
@@ -46,13 +47,25 @@ class Main extends React.Component {
             style={{ display: 'none' }}
           >
             <h2 className="major">{article.title}</h2>
-
             {this.renderArticleBody(article)}
-
             {this.close}
           </article>
-        ))}
-      </div>
+        </div>
+      )
+    } else if (this.props.article === article.id) {
+      return (
+        <div key={`div_${article.id}`} style={{margin: "30px 0px"}}>
+          <h2 className="major">{article.title}</h2>
+          {this.renderArticleBody(article)}
+        </div>
+      )
+    }
+  }
+
+  render() {
+    console.log()
+    return (
+      <> {this.state.articles.map(article => this.renderArticle(article))} </>
     )
   }
 }
@@ -64,6 +77,11 @@ Main.propTypes = {
   onCloseArticle: PropTypes.func,
   timeout: PropTypes.bool,
   setWrapperRef: PropTypes.func.isRequired,
+  dialogMode: PropTypes.bool,
+}
+
+Main.defaultProps = {
+  dialogMode: false,
 }
 
 export default Main
