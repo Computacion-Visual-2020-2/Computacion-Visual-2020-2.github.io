@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/images/rgb.jpeg"],"names":["module","exports"],"mappings":"+EAAAA,EAAOC,QAAU,IAA0B","file":"22-356845799e38fee56bbb.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/rgb-6ebe9ad1fd8073e208d0d489bc6be370.jpeg\";"],"sourceRoot":""}
