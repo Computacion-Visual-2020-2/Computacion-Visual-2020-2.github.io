@@ -15,8 +15,13 @@ class Main extends React.Component {
       ></div>
     )
 
+    let tmpArticles = []
+    if (typeof window !== 'undefined') {
+      tmpArticles = articles[window.location.pathname.replaceAll('/', '')]
+    }
+
     this.state = {
-      articles: articles[window.location.pathname.replaceAll('/', '')],
+      articles: tmpArticles,
     }
   }
 
@@ -33,7 +38,7 @@ class Main extends React.Component {
     if (this.props.dialogMode) {
       return (
         <div
-        key={`art_${article.id}`}
+          key={`art_${article.id}`}
           ref={this.props.setWrapperRef}
           id="main"
           style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
@@ -54,7 +59,7 @@ class Main extends React.Component {
       )
     } else if (this.props.article === article.id) {
       return (
-        <div key={`div_${article.id}`} style={{margin: "30px 0px"}}>
+        <div key={`div_${article.id}`} style={{ margin: '30px 0px' }}>
           <h2 className="major">{article.title}</h2>
           {this.renderArticleBody(article)}
         </div>
