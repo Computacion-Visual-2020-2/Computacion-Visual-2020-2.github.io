@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[23],{"na+v":function(a,n,c){a.exports=c.p+"static/valentinacastano-0adc3784f720eb11441a29bc3363c069.jpg"}}]);
-//# sourceMappingURL=23-e266a203131d05a1e4ae.js.map

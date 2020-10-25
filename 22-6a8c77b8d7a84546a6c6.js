@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[22],{"4U26":function(p,b,d){p.exports=d.p+"static/rgb11-bc19b5d9b0d9951a441df06f54d96f01.jpeg"}}]);
-//# sourceMappingURL=22-6a8c77b8d7a84546a6c6.js.map
