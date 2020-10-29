@@ -1,19 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import ReactMarkdown from 'react-markdown'
 import MathJax from 'react-mathjax2'
 import RemarkMathPlugin from 'remark-math'
 
-function MarkdownRender(props) {
+const MarkdownWrapper = props => {
+  const [markdown, setMarkdown] = useState(null)
+  useEffect(() => {
+    fetch(props.source)
+      .then(txt => txt.text())
+      .then(txt => setMarkdown(txt))
+  })
+
+  return <MarkdownRender source={markdown} />
+}
+
+const MarkdownRender = props => {
   const newProps = {
     ...props,
     plugins: [RemarkMathPlugin],
     renderers: {
       ...props.renderers,
-      text: props => <MathJax.Text text={props.value} />,
-      html: props => <div dangerouslySetInnerHTML={{ __html: props.value }} />,
+      html: props => <span dangerouslySetInnerHTML={{ __html: props.value }} />,
+      // text: props => <MathJax.Text text={props.value} />,
     },
   }
+  console.log('Source ', props.source)
 
   return (
     <MathJax.Context
@@ -32,4 +44,4 @@ function MarkdownRender(props) {
   )
 }
 
-export default MarkdownRender
+export default MarkdownWrapper
