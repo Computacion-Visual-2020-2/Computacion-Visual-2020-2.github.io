@@ -27,10 +27,10 @@ export default [
     body: () => <MotionArteffact />,
   },
   { id: 'stars', title: 'Stars', body: () => <Stars /> },
-  { id: 'discussion', title: 'Discusión', body: () => <Discussion /> },
   {
     id: 'munker-illusion',
     title: 'Ilusión de Munker',
     body: () => <MunkerIllusion />,
   },
+  { id: 'discussion', title: 'Discusión', body: () => <Discussion /> },
 ]
