@@ -1,4 +1,4 @@
-float x,y,z;
+float x,y,m;
 int lim = 1000, rect_size = 100, rotate = 0;
 
 

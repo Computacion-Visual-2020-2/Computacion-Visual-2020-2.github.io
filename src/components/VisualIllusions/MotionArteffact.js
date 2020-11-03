@@ -8,13 +8,13 @@ export default () => {
       <div>
         <h3>Instrucciones: </h3>
         <ul>
-          <li>Observe la imagen unos segundos, luego observe un objeto solido y vuelva a mirar la imagen</li>
+          <li>Observe la imagen unos segundos, luego observe una imagen sólida</li>
         </ul>
 
         <p>
-          Notará que el estímulo estacionario parece moverse en la dirección opuesta al estímulo original 
-          (que se mueve físicamente). Se cree que el efecto secundario del movimiento es el resultado de 
-          la adaptación del movimiento .
+          Notará que el estímulo en la imagen sólida. Se cree que el efecto secundario del movimiento es el resultado de 
+          la adaptación del movimiento, ya que las neuronas que codifican un movimiento particular reducen sus respuestas
+          con el tiempo de exposición a un estímulo en constante movimiento.
         </p>
       </div>
       <div style={{ textAlign: 'center' }}>
