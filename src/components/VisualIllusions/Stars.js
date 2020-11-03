@@ -9,7 +9,7 @@ export default () => {
         <h3>Instrucciones: </h3>
         <ul>
           <li>Ubique el mouse en el centro de la imagen.
-               Luego, cuando cubra el centro de la imagen con la mano, los puntos aparecerán acelerando. 
+               Luego, cubra el centro de la imagen con la mano, los puntos aparecerán acelerando. 
                Por otro lado , si cubre los bordes, parecerá que los puntos se han ralentizado.</li>
         </ul>
 
