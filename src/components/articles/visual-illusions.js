@@ -19,6 +19,7 @@ export default [
   },
   { id: 'ebbinghaus', title: 'Ebbinghaus', body: () => <Ebbinghaus /> },
   { id: 'lilac-chaser', title: 'Lilac Chaser', body: () => <LilacChaser /> },
-  { id: 'motion_arteffact', title: 'Motion Arteffact', body: () => <MotionArteffact /> },
+  { id: 'Motion_aftereffect', title: 'Motion aftereffect', body: () => <MotionArteffact /> },
+  { id: 'stars', title: 'Stars', body: () => <Stars /> },
   { id: 'discussion', title: 'Discución', body: () => <Discussion /> },
 ]
