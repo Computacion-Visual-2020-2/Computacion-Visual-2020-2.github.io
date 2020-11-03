@@ -10,19 +10,24 @@ export default p5 => {
     kernel = [],
     enabled = true
 
-  p5.preload = () => {
-    shader = p5.loadShader(convolutionVert, convolutionFrag)
-
-    img = p5.loadImage(
-      tsunami2,
-      img => {},
-      err => console.log(err)
-    )
-  }
+    const loadImage = image => {
+      img = p5.loadImage(
+        image,
+        img => {},
+        err => console.log(err)
+      )
+    }
+  
+    p5.preload = () => {
+      shader = p5.loadShader(convolutionVert, convolutionFrag)
+      loadImage(tsunami2)
+    }
 
   p5.setup = () => {
     p5.noStroke()
-    canvas = p5.createCanvas(img.width, img.height, p5.WEBGL)
+    const rate = img.height / img.width
+    const width = Math.min(img.width, 500)
+    canvas = p5.createCanvas(width, rate * width, p5.WEBGL)
     kernel = kernels[1].kernel(3, 10).flat()
   }
 
@@ -38,6 +43,10 @@ export default p5 => {
   p5.myCustomRedrawAccordingToNewPropsHandler = function(props) {
     if (props.enabled !== undefined) {
       enabled = props.enabled
+    }
+
+    if (props.image !== undefined) {
+      loadImage(props.image)
     }
   }
 }

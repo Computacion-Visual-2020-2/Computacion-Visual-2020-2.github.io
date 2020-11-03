@@ -2,9 +2,16 @@ import React, { useState } from 'react'
 import { loadableP5 as P5Wrapper } from '../../sketches/lodable'
 import contrastGainControl from '../../sketches/contrast-gain-control'
 import contrast from '../../sketches/contrast-gain-control/contrast'
+import tsunami from '../../images/tsunami.jpg'
+import picasso from '../../images/picasso.jpg'
+import botticelli from '../../images/botticelli.jpg'
+import vermeer from '../../images/vermeer.jpg'
 
 export default () => {
+  const images = [tsunami, picasso, botticelli, vermeer]
+
   const [enabled, setEnabled] = useState(false)
+  const [image, setImage] = useState(Math.floor(Math.random() * images.length))
 
   return (
     <>
@@ -32,15 +39,39 @@ export default () => {
         </p>
       </div>
       <div
-        style={{ textAlign: 'center', display: 'flex' }}
+        style={{
+          textAlign: 'center',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
         onMouseEnter={() => setEnabled(false)}
         onMouseLeave={() => setEnabled(true)}
       >
-        <P5Wrapper sketch={contrastGainControl} enabled={enabled} />
+        <P5Wrapper
+          sketch={contrastGainControl}
+          enabled={enabled}
+          image={images[image]}
+        />
         <div style={{ alignSelf: 'center', margin: '0px 15px' }}>
           <strong>x</strong>
         </div>
-        <P5Wrapper sketch={contrast} enabled={enabled} />
+        <P5Wrapper sketch={contrast} enabled={enabled} image={images[image]} />
+      </div>
+
+      <div style={{ textAlign: 'center' }}>
+        <button
+          style={{ marginRight: 10 }}
+          onClick={() => setImage(prev => (prev - 1) % images.length)}
+        >
+          Previous
+        </button>
+        <button
+          style={{ marginLeft: 10 }}
+          onClick={() => setImage(prev => (prev + 1) % images.length)}
+        >
+          Next
+        </button>
       </div>
     </>
   )
