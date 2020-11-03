@@ -2,6 +2,7 @@ import React from 'react'
 import ContrastGainControl from '../VisualIllusions/ContrastGainControl'
 import Discussion from '../VisualIllusions/Discussion'
 import Ebbinghaus from '../VisualIllusions/Ebbinghaus'
+import Stars from '../VisualIllusions/Stars'
 import LilacChaser from '../VisualIllusions/LilacChaser'
 import ObliqueGrating from '../VisualIllusions/ObliqueGrating'
 import MotionArteffact from '../VisualIllusions/MotionArteffact'
@@ -21,5 +22,5 @@ export default [
   { id: 'lilac-chaser', title: 'Lilac Chaser', body: () => <LilacChaser /> },
   { id: 'Motion_aftereffect', title: 'Motion aftereffect', body: () => <MotionArteffact /> },
   { id: 'stars', title: 'Stars', body: () => <Stars /> },
-  { id: 'discussion', title: 'Discución', body: () => <Discussion /> },
+  { id: 'discussion', title: 'Discusión', body: () => <Discussion /> },
 ]

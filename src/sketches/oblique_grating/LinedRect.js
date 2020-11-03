@@ -21,7 +21,7 @@ class LinedRect {
             this.xpos + this.hei * i,
             ycen,
             16,
-            i % 2 == (this.inBlack ? 1 : 0)
+            i % 2 === (this.inBlack ? 1 : 0)
           )
         )
       }
@@ -41,7 +41,7 @@ class LinedRect {
     this.rhombuses.forEach(r => {
       r.display(p5)
       r.setStartsWithBlack(
-        this.disabledIllusion && i++ % 2 == (this.inBlack ? 1 : 0)
+        this.disabledIllusion && i++ % 2 === (this.inBlack ? 1 : 0)
       )
     })
   }

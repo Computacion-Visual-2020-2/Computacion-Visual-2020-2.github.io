@@ -10,7 +10,7 @@ export default p5 => {
 
     let counter = 0
     for (let i = 0; i < 9; i++) {
-      if ((i + 2) % 3 != 0) {
+      if ((i + 2) % 3 !== 0) {
         counter++
         rects.push(
           new LinedRect(
@@ -18,7 +18,7 @@ export default p5 => {
             50 * i,
             600,
             50,
-            counter % 2 == 0 ? 'top' : 'bottom',
+            counter % 2 === 0 ? 'top' : 'bottom',
             startsWithBlack
           )
         )
@@ -44,7 +44,7 @@ export default p5 => {
         lr.disableIllusion()
         startsWithBlack = !startsWithBlack
 
-        if (counter % 2 == 0) {
+        if (counter % 2 === 0) {
           startsWithBlack = !startsWithBlack
         }
       } else {
