@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/images/gatsby-icon.png"],"names":["module","exports"],"mappings":"+EAAAA,EAAOC,QAAU,IAA0B","file":"13-ab0aefc4f7d11b66dbb5.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/gatsby-icon-4a9773549091c227cd2eb82ccd9c5e3a.png\";"],"sourceRoot":""}

@@ -15,18 +15,19 @@ Implementar al menos 6 ilusiones de tres tipos distintos (paradójicas, geométr
 
 1. Complete la tabla
 
-| Ilusión | Categoria | Referencia | Tipo de interactividad (si aplica) | URL código base (si aplica) |
+| Ilusión | Categoría | Referencia | Tipo de interactividad (si aplica) | URL código base (si aplica) |
 |---------|-----------|------------|------------------------------------|-----------------------------|
 | Contrast gain control | Luminancia y contraste - Fragment shader | https://michaelbach.de/ot/lum-contrastAdapt/index.html | Cuando el mouse hace hover sobre la imagen se deshabilita el procesamiento de la imagen | [Código propio](https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/tree/develop/src/sketches/contrast-gain-control) |
 | Oblique grating | Geométrica | https://michaelbach.de/ot/ang-SkyeGrating2/index.html | Al hacer clic los cuadrados con colores de un tablero de ajedrez cambian su posición | [Código Propio](https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/tree/develop/src/sketches/oblique_grating) |
 | Stars | Movimiento e Interactiva | https://moillusions.com/wp-content/uploads/2011/09/super_duper_illusion.gif | Poner el puño en el centro | https://www.youtube.com/watch?v=17WoOqgXsRM |
 |Motion Aftereffect | Motion Aftereffect | https://en.wikipedia.org/wiki/Motion_aftereffect |           |                             |
+| Ebbinghaus | Percepción | https://es.wikipedia.org/wiki/Ilusi%C3%B3n_de_Ebbinghaus | Al hacer click sobre el contenedor se ocultan las esferas azules y es posible ver que las naranjas en realidad son del mismo tamaño | [Código Adaptado](https://www.openprocessing.org/sketch/140477) |
+| Lilac Chaser | Sensación y percepción | https://es.wikipedia.org/wiki/Perseguidor_del_lila | Mire fijamente el punto en el centro y notara los diferentes efectos de la ilusión | [Código Adaptado](https://forum.processing.org/one/topic/lilac-chaser.html ) |
 |         |           |            |                                    |                             |
-|         |           |            |                                    |                             |
 
 
 
-2. Describa brevememente las referencias estudiadas y los posibles temas en los que le gustaría profundizar
+2. Describa brevemente las referencias estudiadas y los posibles temas en los que le gustaría profundizar
 
 * [Depth-dependent contrast gain-control - Richard N. Aslin*, Peter W. Battaglia, Robert A. Jacobs](https://www.sciencedirect.com/science/article/pii/S0042698903007296)
   
