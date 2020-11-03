@@ -8,7 +8,39 @@ const Taller2 = props => {
       <header id="header">
         <nav>
           <ul>
-            {articles['visual-illusions'].map(article => (
+            {articles['visual-illusions'].slice(0, 4).map(article => (
+              <li key={`li_${article.id}`}>
+                <button
+                  onClick={() => {
+                    props.onOpenArticle(article.id)
+                  }}
+                >
+                  {article.title}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <nav>
+          <ul>
+            {articles['visual-illusions'].slice(4, articles['visual-illusions'].length - 1).map(article => (
+              <li key={`li_${article.id}`}>
+                <button
+                  onClick={() => {
+                    props.onOpenArticle(article.id)
+                  }}
+                >
+                  {article.title}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <nav>
+          <ul>
+            {articles['visual-illusions'].slice(articles['visual-illusions'].length - 1, articles['visual-illusions'].length).map(article => (
               <li key={`li_${article.id}`}>
                 <button
                   onClick={() => {
