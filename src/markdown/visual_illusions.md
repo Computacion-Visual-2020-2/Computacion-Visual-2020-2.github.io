@@ -19,8 +19,8 @@ Implementar al menos 6 ilusiones de tres tipos distintos (paradójicas, geométr
 |---------|-----------|------------|------------------------------------|-----------------------------|
 | Contrast gain control | Luminancia y contraste - Fragment shader | https://michaelbach.de/ot/lum-contrastAdapt/index.html | Cuando el mouse hace hover sobre la imagen se deshabilita el procesamiento de la imagen | [Código propio](https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/tree/develop/src/sketches/contrast-gain-control) |
 | Oblique grating | Geométrica | https://michaelbach.de/ot/ang-SkyeGrating2/index.html | Al hacer clic los cuadrados con colores de un tablero de ajedrez cambian su posición | [Código Propio](https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/tree/develop/src/sketches/oblique_grating) |
-|         |           |            |                                    |                             |
-|         |           |            |                                    |                             |
+| Stars | Movimiento e Interactiva | https://moillusions.com/wp-content/uploads/2011/09/super_duper_illusion.gif | Poner el puño en el centro | https://www.youtube.com/watch?v=17WoOqgXsRM |
+|Motion Aftereffect | Motion Aftereffect | https://en.wikipedia.org/wiki/Motion_aftereffect |           |                             |
 |         |           |            |                                    |                             |
 |         |           |            |                                    |                             |
 

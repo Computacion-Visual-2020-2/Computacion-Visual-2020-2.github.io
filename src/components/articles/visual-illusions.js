@@ -4,6 +4,7 @@ import Discussion from '../VisualIllusions/Discussion'
 import Ebbinghaus from '../VisualIllusions/Ebbinghaus'
 import LilacChaser from '../VisualIllusions/LilacChaser'
 import ObliqueGrating from '../VisualIllusions/ObliqueGrating'
+import MotionArteffact from '../VisualIllusions/MotionArteffact'
 
 export default [
   {
@@ -18,5 +19,6 @@ export default [
   },
   { id: 'ebbinghaus', title: 'Ebbinghaus', body: () => <Ebbinghaus /> },
   { id: 'lilac-chaser', title: 'Lilac Chaser', body: () => <LilacChaser /> },
+  { id: 'motion_arteffact', title: 'Motion Arteffact', body: () => <MotionArteffact /> },
   { id: 'discussion', title: 'Discución', body: () => <Discussion /> },
 ]
