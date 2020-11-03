@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/images/brandonavilan.jpg"],"names":["module","exports"],"mappings":"+EAAAA,EAAOC,QAAU,IAA0B","file":"14-f4ea2eb189dd21c9ced6.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/brandonavilan-d7196a147634ca9b7a6802ac6b4d4760.jpg\";"],"sourceRoot":""}

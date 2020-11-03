@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{"8Cem":function(e,n,t){"use strict";t.r(n);var r=t("q1tI"),a=t.n(r),l=t("riM3"),c=t("EEoQ");n.default=function(e){var n=e.kernel,t=e.kernelSize;return a.a.createElement(a.a.Fragment,null,a.a.createElement("div",{style:{textAlign:"center"}},a.a.createElement(l.a,{sketch:c.a,kernel:n,kernelSize:t})))}}}]);
-//# sourceMappingURL=11-03b9c7119a963e0d9f46.js.map
