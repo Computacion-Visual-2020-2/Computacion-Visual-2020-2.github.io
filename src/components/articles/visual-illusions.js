@@ -6,7 +6,6 @@ import Stars from '../VisualIllusions/Stars'
 import LilacChaser from '../VisualIllusions/LilacChaser'
 import ObliqueGrating from '../VisualIllusions/ObliqueGrating'
 import MotionArteffact from '../VisualIllusions/MotionArteffact'
-import Stars from '../VisualIllusions/Stars'
 
 
 export default [
@@ -23,6 +22,6 @@ export default [
   { id: 'ebbinghaus', title: 'Ebbinghaus', body: () => <Ebbinghaus /> },
   { id: 'lilac-chaser', title: 'Lilac Chaser', body: () => <LilacChaser /> },
   { id: 'Motion_aftereffect', title: 'Motion aftereffect', body: () => <MotionArteffact /> },
-  // { id: 'stars', title: 'Stars', body: () => <Stars /> },
+  { id: 'stars', title: 'Stars', body: () => <Stars /> },
   { id: 'discussion', title: 'Discusión', body: () => <Discussion /> },
 ]
