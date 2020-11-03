@@ -1,6 +1,6 @@
 import React from 'react'
 import { loadableP5 as P5Wrapper } from '../../sketches/lodable'
-import oblique_grating from '../../sketches/oblique_grating'
+import stars from '../../sketches/stars'
 
 export default () => {
   return (
@@ -8,16 +8,17 @@ export default () => {
       <div>
         <h3>Instrucciones: </h3>
         <ul>
-          <li>Haga clic sobre la imagen</li>
+          <li>Ubique el mouse en el centro de la imagen.
+               Luego, cuando cubra el centro de la imagen con la mano, los puntos aparecerán acelerando. 
+               Por otro lado , si cubre los bordes, parecerá que los puntos se han ralentizado.</li>
         </ul>
 
         <p>
-          Notará que las lineas azules horizonales, que parecieran no ser
-          paralelas entre ellas, realmente sí lo son
+          Notará que cambios de velocidades.
         </p>
       </div>
       <div style={{ textAlign: 'center' }}>
-        <P5Wrapper sketch={oblique_grating} />
+        <P5Wrapper sketch={stars} />
       </div>
     </>
   )

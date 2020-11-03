@@ -6,6 +6,8 @@ import Stars from '../VisualIllusions/Stars'
 import LilacChaser from '../VisualIllusions/LilacChaser'
 import ObliqueGrating from '../VisualIllusions/ObliqueGrating'
 import MotionArteffact from '../VisualIllusions/MotionArteffact'
+import Stars from '../VisualIllusions/Stars'
+
 
 export default [
   {
