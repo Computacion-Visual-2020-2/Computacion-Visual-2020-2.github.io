@@ -1,12 +1,14 @@
+import rocas from '../../images/rocas.jpg';
 export default p5 => {
     let lim = 1000, rect_size = 100, rotate = 0, x, y,m;
-  
+    let img;
+
     p5.setup = () => {
-      p5.createCanvas(720,720);
+      p5.createCanvas(500,500);
       p5.background(255);
       p5.frameRate(256);
-      x = 720/2;
-      y = 720/2;  
+      x = 500/2;
+      y = 500/2;  
     }
    let step = 0, radius =100;
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import ooo from '../../sketches/motion_arteffact'
 import { loadableP5 as P5Wrapper } from '../../sketches/lodable'
+import rocas from '../../images/rocas.jpg'
 
 export default () => {
   return (
@@ -19,6 +20,7 @@ export default () => {
       </div>
       <div style={{ textAlign: 'center' }}>
         <P5Wrapper sketch={ooo} />
+        <img src={rocas} alt=""  width="600px" />
       </div>
     </>
   )
