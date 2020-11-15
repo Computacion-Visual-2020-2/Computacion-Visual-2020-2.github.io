@@ -1,6 +1,4 @@
 import React from 'react'
-import { loadableP5 as P5Wrapper } from '../../sketches/lodable'
-import munkerIllusion from '../../sketches/munkerIllusion'
 
 export default () => (
   <>

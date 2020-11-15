@@ -1,4 +1,5 @@
 import rocas from '../../images/rocas.jpg';
+
 export default p5 => {
     let lim = 1000, rect_size = 100, rotate = 0, x, y,m;
     let img;
