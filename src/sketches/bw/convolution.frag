@@ -3,7 +3,6 @@
 precision mediump float;
 #endif
 
-uniform float kernel[9];
 uniform sampler2D tex0;
 uniform vec2 textureSize;
 
