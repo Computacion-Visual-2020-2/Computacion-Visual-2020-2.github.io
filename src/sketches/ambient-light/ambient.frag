@@ -18,7 +18,6 @@ varying vec2 vTexCoord;
 void main(void){
   vec3 vLightColor=lightColor/255.0;
   vec2 pxPosition=vTexCoord;
-  
   pxPosition.y=1.-pxPosition.y;
   
   vec4 px=texture2D(tex0,pxPosition);

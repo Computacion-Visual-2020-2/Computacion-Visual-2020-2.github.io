@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { loadableP5 as P5Wrapper } from '../../sketches/lodable'
-import contrast from '../../sketches/ambient-light'
+import allLights from '../../sketches/all-lights'
 import Slider from 'react-rangeslider'
 
 import { CirclePicker } from 'react-color'
@@ -13,12 +13,12 @@ export default () => {
     <>
       <div style={{ textAlign: 'center' }}>
         <P5Wrapper
-          sketch={contrast}
+          sketch={allLights}
           intensity={intensity}
           lightColor={lightColor}
         />
       </div>
-      <div>
+      {/* <div>
         <h5>Intensity: </h5>
         <Slider
           min={0}
@@ -28,7 +28,7 @@ export default () => {
           value={intensity}
           onChange={setIntensity}
         />
-      </div>
+      </div> */}
       <div style={{ marginTop: 40 }}>
         <h5>Color: </h5>
         <CirclePicker

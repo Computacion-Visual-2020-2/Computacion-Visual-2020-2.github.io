@@ -1,7 +1,8 @@
-import ambientFrag from 'file-loader!./ambient.frag'
-import ambientVert from 'file-loader!./ambient.vert'
+import lightsFrag from 'file-loader!./lights.frag'
+import lightsVert from 'file-loader!./lights.vert'
 import tsunami from '../../images/tsunami.jpg'
 import symmetricArt from '../../images/symmetric_art.jpg'
+import teapotObj from 'file-loader!../../objects/teapot.obj'
 
 export default p5 => {
   let theShader,
@@ -9,17 +10,19 @@ export default p5 => {
     theta = 0,
     x,
     y,
-    cameraLocation,
-    camera
+    teapot
 
   let img,
     img2,
     canvas,
     lightColor = [255, 255, 255],
-    intensity = 0
+    intensity = 0,
+    camera,
+    cameraLocation
 
   p5.preload = () => {
-    theShader = p5.loadShader(ambientVert, ambientFrag)
+    teapot = p5.loadModel(teapotObj, true)
+    theShader = p5.loadShader(lightsVert, lightsFrag)
     img = p5.loadImage(tsunami)
     img2 = p5.loadImage(symmetricArt)
   }
@@ -54,49 +57,50 @@ export default p5 => {
 
   p5.draw = () => {
     if (canvas) {
+      // p5.orbitControl();
       updateCameraLocation()
-      p5.background(200)
+
+      let locX = p5.mouseX - p5.width / 2
+      let locY = p5.mouseY - p5.height / 2
+
+      p5.ambientLight(100);
+
+      p5.directionalLight(255, 255, 255, 100, 0, 100)
 
       camera.lookAt(0, 0, 0)
       camera.setPosition(cameraLocation.x, cameraLocation.y, cameraLocation.z)
 
+      p5.background(200)
+
       shaderTexture.shader(theShader)
 
-      theShader.setUniform('resolution', [p5.width, p5.height])
-      theShader.setUniform('time', p5.millis() / 1000.0)
-      theShader.setUniform('mouse', [
-        p5.mouseX,
-        p5.map(p5.mouseY, 0, p5.height, p5.height, 0),
-      ])
-      theShader.setUniform('textureSize', [p5.width, p5.height])
-      theShader.setUniform('intensity', (intensity % 100) / 100)
-      theShader.setUniform('lightColor', lightColor)
+      p5.pointLight(255, 255, 255, locX, locY, 100)
+
+      theShader.setUniform('uResolution', [p5.width, p5.height])
+      theShader.setUniform('uTime', p5.millis() / 1000.0)
+      theShader.setUniform('uMouse', [-locX, -locY, -100])
+      theShader.setUniform('uTextureSize', [p5.width, p5.height])
+      theShader.setUniform('uIntensity', (intensity % 100) / 100)
+      theShader.setUniform('uLightColor', lightColor)
       theShader.setUniform('tex0', img)
+
+      p5.push()
+      p5.translate(250, 0, 0)
+      p5.rotateX(9.5)
+      p5.model(teapot)
+      p5.pop()
 
       shaderTexture.rect(0, 0, p5.width, p5.height)
       p5.texture(shaderTexture)
 
       p5.translate(-150, 0, 0)
       p5.push()
-      p5.rotateZ(theta * p5.mouseX * 0.0001)
-      p5.rotateX(theta * p5.mouseX * 0.0001)
-      p5.rotateY(theta * p5.mouseX * 0.0001)
+      // p5.rotateZ(p5.frameCount * 0.01)
+      // p5.rotateX(p5.frameCount * 0.01)
+      // p5.rotateY(p5.frameCount * 0.01)
       theta += 0.05
-      p5.sphere(80)
-      p5.pop()
-
-      theShader.setUniform('tex0', img2)
-
-      shaderTexture.rect(0, 0, p5.width, p5.height)
-      p5.texture(shaderTexture)
-
-      p5.push()
-      p5.translate(250, 0, 0)
-      p5.rotateZ(theta * p5.mouseX * 0.0001)
-      p5.rotateX(theta * p5.mouseX * 0.0001)
-      p5.rotateY(theta * p5.mouseX * 0.0001)
-
-      p5.torus(80, 20, 64, 64)
+      p5.specularMaterial(255)
+      p5.box(80)
       p5.pop()
     }
   }
