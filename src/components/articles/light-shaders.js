@@ -13,7 +13,7 @@ export default [
     title: 'Simple lighting models',
     body: () => <AllLights />,
   },
-  { id: 'light-attenuation', title: 'Light Attenuation', body: () => <LightAttenuation /> },
+  // { id: 'light-attenuation', title: 'Light Attenuation', body: () => <LightAttenuation /> },
   { id: 'fog', title: 'Fog', body: () => <Fog /> },
   { id: 'dicussion', title: 'Discussion', body: () => <Discussion /> },
 ]
