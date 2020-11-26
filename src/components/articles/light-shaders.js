@@ -15,5 +15,5 @@ export default [
   },
   // { id: 'light-attenuation', title: 'Light Attenuation', body: () => <LightAttenuation /> },
   { id: 'fog', title: 'Fog', body: () => <Fog /> },
-  { id: 'dicussion', title: 'Discussion', body: () => <Discussion /> },
+  // { id: 'dicussion', title: 'Discussion', body: () => <Discussion /> },
 ]
