@@ -130,8 +130,8 @@ Contemplando el histograma podemos ver que con dos cluster muy probablemente ten
 Otro ejemplo:
 
 <img src="https://i.postimg.cc/v8P3drpP/8.png" />
-<img src="https://ibb.co/1ZKb3Kh" />
-Segmentación  k=2 y k=3
-<img src="https://ibb.co/BG0Tvh7" />
-Segmentación  k=4 y k=5
 <img src="https://i.postimg.cc/wjRW214w/9.png" />
+Segmentación  k=2 y k=3
+<img src="https://i.postimg.cc/ydjnxcW8/10.png" />
+Segmentación  k=4 y k=5
+<img src="https://i.postimg.cc/T1H9qxV8/11.png" />
