@@ -22,6 +22,11 @@ const Workshops = () => (
       <h3 style={{ marginTop: 20 }}>Taller 3</h3>
       <Link to="/light-shaders">Light shaders</Link>
     </Accordion>
+
+    <Accordion>
+      <h3 style={{ marginTop: 20 }}>Taller 4</h3>
+      <Link to="/segmentation">Segmentación</Link>
+    </Accordion>
   </div>
 )
 
