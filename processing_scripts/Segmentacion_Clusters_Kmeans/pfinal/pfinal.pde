@@ -5,7 +5,7 @@ int histMax;
 
 void setup() {
   size(1688, 750);
-  img = loadImage("pg.jpg");
+  img = loadImage("pg.jpeg");
   image(img, 0, 0);
 
   // Calculate the histogram

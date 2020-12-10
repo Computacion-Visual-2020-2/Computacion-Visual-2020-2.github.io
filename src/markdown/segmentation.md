@@ -256,6 +256,7 @@ Contemplando el histograma podemos ver que con dos cluster muy probablemente ten
 
 ### Implementación por software
 
-
-
-[Código fuente](https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/develop/processing_scripts/Segmentacion_Clusters_Kmeans/pfinal.pde)
+||
+|:-------------:|
+|![Segmentation example](https://i.postimg.cc/G35fwd5b/Deepin-Bildschirmfoto-dde-desktop-20201210094713.png)|
+|**Figura 8.** Segmentación implementada en processing [Código fuente](https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/develop/processing_scripts/Segmentacion_Clusters_Kmeans/pfinal.pde)|
