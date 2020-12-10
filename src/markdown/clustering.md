@@ -18,7 +18,7 @@ El  algoritmo de agrupación de K -Means es un algoritmo no supervisado y se uti
 
 El algoritmo se utiliza cuando tiene datos sin etiquetar (es decir, datos sin categorías o grupos definidos). El objetivo es encontrar ciertos grupos basados ​​en algún tipo de similitud en los datos con el número de grupos representados por K.
 
-<img src="https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/develop/src/images/rgb.jpeg?raw=true" width="450" /> 
+<img src="https://data-flair.training/blogs/wp-content/uploads/sites/2/2019/07/PCA-Cluster-Graph-in-ML.png" width="450" /> 
 
 El objetivo de la agrupación de K-Means es minimizar la suma de las distancias al cuadrado entre todos los puntos y el centro del grupo.
 Pasos en el algoritmo K-Means:
