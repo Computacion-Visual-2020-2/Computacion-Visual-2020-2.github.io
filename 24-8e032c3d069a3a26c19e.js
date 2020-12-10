@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[24],{waaq:function(c,a,n){c.exports=n.p+"static/gatsby-icon-4a9773549091c227cd2eb82ccd9c5e3a.png"}}]);
+//# sourceMappingURL=24-8e032c3d069a3a26c19e.js.map

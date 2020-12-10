@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[16],{DsmA:function(a,n,p){a.exports=p.p+"static/brandonavilan-d7196a147634ca9b7a6802ac6b4d4760.jpg"}}]);
-//# sourceMappingURL=16-4b80ad100d11265893fd.js.map

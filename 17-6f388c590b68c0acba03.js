@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[17],{XyP0:function(n,a,p){n.exports=p.p+"static/Segmentación.002-37e7dbbfb5d2cd4aa57a1abf2fe9f103.png"}}]);
+//# sourceMappingURL=17-6f388c590b68c0acba03.js.map

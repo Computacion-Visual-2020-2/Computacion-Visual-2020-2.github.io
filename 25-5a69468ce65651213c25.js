@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[25],{k0px:function(p,n,e){p.exports=e.p+"static/tsunami2-99ae9e103b8e53458236570d228330b0.jpg"}}]);
+//# sourceMappingURL=25-5a69468ce65651213c25.js.map

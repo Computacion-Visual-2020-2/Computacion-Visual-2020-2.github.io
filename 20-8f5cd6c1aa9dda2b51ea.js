@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[20],{ypcC:function(c,p,e){c.exports=e.p+"static/luma-2ccf887e38d50483c05cb85ee285f87a.jpeg"}}]);
-//# sourceMappingURL=20-8f5cd6c1aa9dda2b51ea.js.map

@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[20],{"FPL+":function(e,n,p){e.exports=p.p+"static/Segmentación.005-b03a62d928e84e01a310842ae909fe8e.png"}}]);
+//# sourceMappingURL=20-7bafdb9e26eafcc6ac41.js.map

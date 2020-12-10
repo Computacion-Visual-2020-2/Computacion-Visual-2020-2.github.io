@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/images/tsunami2.jpg"],"names":["module","exports"],"mappings":"+EAAAA,EAAOC,QAAU,IAA0B","file":"32-35cad60afa08063a9bb0.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/tsunami2-99ae9e103b8e53458236570d228330b0.jpg\";"],"sourceRoot":""}
