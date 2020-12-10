@@ -21,13 +21,10 @@ Existen diferentes tipos de segmentación, listados a continuación:
 ### Segmentación basada en características de píxel.
 Se evalúa cada píxel en función de las características locales de la imagen en el píxel (y usualmente también sus vecinos), y se decide a qué región (también conocido como segmento) pertenece. Este tipo de segmentación se usa comúnmente cuando se requiere separar objetos con similares características de color o intensidad de un fondo heterogéneo. El caso ideal es aquel en el cual los objetos poseen un rango de colores o intensidad de gris muy estrecho, siendo el fondo uniforme. En tal caso se puede definir un umbral de segmentación para separar objetos del fondo. A esta técnica de asignación de un umbral se la conoce como thresholding (literalmente "umbralización"). 
 
-<img src="https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/develop/src/images/Segmentación.001.png?raw=true" width="450" /> 
-
-**Figura 1.** Segmentación basada en umbral de intensidad de gris.
-
-<img src="https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/develop/src/images/Segmentación.002.png?raw=true" width="450" /> 
-
-**Figura 2.** Segmentación basada en umbral de intensidad de gris.
+||||
+|:-----:|:-----:|
+|<img src="https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/develop/src/images/Segmentación.001.png?raw=true" width="450" /> |<img src="https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/develop/src/images/Segmentación.002.png?raw=true" width="450" /> |
+|**Figura 1.** Segmentación basada en umbral de intensidad de gris.|**Figura 2.** Segmentación basada en umbral de intensidad de gris.|
 
 En el thresholding se define un valor umbral y se toman los píxeles en este rango según pertenezcan o no al fondo: se toman los que no pertenecen al fondo y se rechazan todos los demás. Una imagen de este tipo se muestra como una imagen binaria (de dos niveles) utilizando blanco y negro u otros colores para distinguir las regiones (no hay una convención estándar sobre cuáles son los rasgos de interés, si los blancos o los negros, así que la elección varía en cada caso).
 
@@ -55,23 +52,26 @@ $\rho = x cos \theta + y sin \theta$
 
 Por lo tanto, la transformada de Hough requiere una transformación del espacio de coordenadas $(x,y)$ en el espacio polar de parámetros $(\rho, θ)$. En esta transformación, una recta en el espacio $(x, y)$ que esté a distancia $\rho j$ del origen y posea pendiente $\theta_i$, se representa como un sólo punto $(\rho_j, \theta_i)$ en el espacio transformado (Figura 3).
 
-<img src="https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/develop/src/images/Segmentación.003.png?raw=true" width="450" /> 
-
-**Figura 3.** Transformada de Hough de una recta
+||
+|:-------:|
+|<img src="https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/develop/src/images/Segmentación.003.png?raw=true" width="450" /> |
+|**Figura 3.** Transformada de Hough de una recta|
 
 Así mismo, la transformada de un punto en el plano $(x,y)$ corresponde a una curva sinusoidal en el plano $(\rho, θ)$ (Figura 4). Es importante destacar que los puntos de cruce de todas las curvas en el espacio de Hough, definen la recta a la que pertenecen dichos puntos en el espacio imagen. 
 
-<img src="https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/develop/src/images/Segmentación.004.png?raw=true" width="450" /> 
-
-**Figura 4.** Transformada de Hough de tres puntos A, B, C.
+||
+|:-------:|
+|<img src="https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/develop/src/images/Segmentación.004.png?raw=true" width="450" />|
+|**Figura 4.** Transformada de Hough de tres puntos A, B, C.|
 
 A partir de la Transformada de Hough, es posible seleccionar píxeles que pertenecen a rectas de interés. Para ello, se toma como característica discriminatoria los valores de $(\rho_j, \theta_i)$ deseados, y para cada píxel de la imagen original, se calcula el $\rho$ y el $\theta$ correspondiente, manteniendo el píxel en uno y otro segmento según cumpla con los valores discriminatorios. 
 
 La Transformada de Hough inicialmente se aplicó para la detección de rectas sobre imágenes, aunque más tarde se extendió para ser usada con cualquier tipo de curva que pudiera describirse de forma paramétrica (triángulos, círculos, elipses, rectángulos, etc..), conociéndose el método como Transformada de Hough Generalizada. 
 
-<img src="https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/develop/src/images/Segmentación.005.png?raw=true" width="450" /> 
-
-**Figura 5.** Aplicación de la Transformada de Hough Generalizada.
+||
+|:-------:|
+|<img src="https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/develop/src/images/Segmentación.005.png?raw=true" width="450" /> |
+|**Figura 5.** Aplicación de la Transformada de Hough Generalizada.|
 
 Finalmente, a modo de conclusión se exponen las ventajas e inconvenientes de la aplicación de esta técnica. Como ventajas se pueden señalar: 
 
@@ -134,15 +134,18 @@ El  algoritmo de agrupación de k-means es un algoritmo no supervisado y se util
 
 El algoritmo se utiliza cuando tiene datos sin etiquetar (es decir, datos sin categorías o grupos definidos). El objetivo es encontrar ciertos grupos basados ​​en algún tipo de similitud en los datos con el número de grupos representados por K.
 
-<img src="https://data-flair.training/blogs/wp-content/uploads/sites/2/2019/07/PCA-Cluster-Graph-in-ML.png" width="450" /> 
+||
+|:-------:|
+|<img src="https://data-flair.training/blogs/wp-content/uploads/sites/2/2019/07/PCA-Cluster-Graph-in-ML.png" width="450" /> |
+|**Figura 6.** Ejemplo del algoritmo k-means |
 
-El objetivo de la agrupación de K-Means es minimizar la suma de las distancias al cuadrado entre todos los puntos y el centro del grupo.
+El objetivo de la agrupación de k-means es minimizar la suma de las distancias al cuadrado entre todos los puntos y el centro del grupo.
 
-**Pasos en el algoritmo K-Means:**
+**Pasos en el algoritmo k-means:**
 
-1. Elija el número de grupos K.
-2. Seleccione al azar K puntos, los centroides (no necesariamente de su conjunto de datos).
-3. Asigne cada punto de datos al centroide más cercano → que forma K grupos.
+1. Elija el número de grupos $k$.
+2. Seleccione al azar $k$ puntos, los centroides (no necesariamente de su conjunto de datos).
+3. Asigne cada punto de datos al centroide más cercano → que forma $k$ grupos.
 4. Calcule y coloque el nuevo centroide de cada grupo.
 5. Reasigne cada punto de datos al nuevo centroide más cercano. Si alguna reasignación. tuvo lugar, vaya al paso 4; de lo contrario, el modelo está listo.
 
@@ -150,17 +153,18 @@ El objetivo de la agrupación de K-Means es minimizar la suma de las distancias 
 
 Para una determinada clase de algoritmos de agrupación, existe un parámetro comúnmente denominado $k$ que especifica el número de agrupaciones a detectar. Otros algoritmos como el algoritmo DBSCAN y OPTICS no requieren la especificación de este parámetro; La agrupación en clústeres jerárquica evita el problema por completo.
 
-Si hablamos de K-Means, entonces la elección correcta de $k$ es a menudo ambigua, con interpretaciones que dependen de la forma y escala de la distribución de puntos en un conjunto de datos y la resolución de agrupación deseada por el usuario. Además, aumentar $k$ sin penalización siempre reducirá la cantidad de error en el agrupamiento resultante, al caso extremo de error cero si cada punto de datos se considera su propio grupo (es decir, cuando $k$ es igual al número de puntos de datos, $n$). Entonces, intuitivamente, la elección óptima de $k$ logrará un equilibrio entre la compresión máxima de los datos utilizando un solo grupo y la máxima precisión al asignar cada punto de datos a su propio grupo .
+Si hablamos de k-means, entonces la elección correcta de $k$ es a menudo ambigua, con interpretaciones que dependen de la forma y escala de la distribución de puntos en un conjunto de datos y la resolución de agrupación deseada por el usuario. Además, aumentar $k$ sin penalización siempre reducirá la cantidad de error en el agrupamiento resultante, al caso extremo de error cero si cada punto de datos se considera su propio grupo (es decir, cuando $k$ es igual al número de puntos de datos, $n$). Entonces, intuitivamente, la elección óptima de $k$ logrará un equilibrio entre la compresión máxima de los datos utilizando un solo grupo y la máxima precisión al asignar cada punto de datos a su propio grupo .
 
 Si un valor apropiado de $k$ no es evidente a partir del conocimiento previo de las propiedades del conjunto de datos, debe elegirse de alguna manera. Hay varios métodos para tomar esta decisión y el método del codo es uno de esos métodos.
 
 ### Método del codo
  
-La idea básica detrás de los métodos de partición, como el agrupamiento de K-Means, es definir grupos de modo que se minimice la variación total intra-grupo o, en otras palabras, la suma total de cuadrados dentro del grupo (WCSS). El WCSS total mide la compacidad del agrupamiento y queremos que sea lo más pequeño posible.
+La idea básica detrás de los métodos de partición, como el agrupamiento de k-means, es definir grupos de modo que se minimice la variación total intra-grupo o, en otras palabras, la suma total de cuadrados dentro del grupo (WCSS). El WCSS total mide la compacidad del agrupamiento y queremos que sea lo más pequeño posible.
 
 ||
 |:-------:|
 |<img src="https://i2.wp.com/www.aprendemachinelearning.com/wp-content/uploads/2018/03/ejemplo-elbow.png?resize=768%2C422" />|
+|**Figura 7.** Gráfico para determinar el punto de inflexión de acuerdo al método del codo |
 
 El método Elbow mira el WCSS total en función del número de clústeres: se debe elegir un número de clústeres para que agregar otro clúster no mejore mucho mejor el WCSS total.
 
@@ -171,21 +175,21 @@ Pasos para elegir el número óptimo de clústeres K: (Método del codo)
 3. Trace la curva de WCSS frente al número de grupos $k$.
 4. La ubicación de una curva (rodilla) en la parcela se considera generalmente como un indicador del número apropiado de grupos.
 
-A pesar de todas las ventajas que tiene K-Means, a veces falla debido a la elección aleatoria de centroides que se llama la trampa de inicialización aleatoria.
+A pesar de todas las ventajas que tiene k-means, a veces falla debido a la elección aleatoria de centroides que se llama la trampa de inicialización aleatoria.
 
-Para resolver este problema, tenemos un procedimiento de inicialización para K-Means que se llama K-Means ++ (Algoritmo para elegir los valores iniciales para la agrupación de K-Means).
+Para resolver este problema, tenemos un procedimiento de inicialización para k-means que se llama k-means ++ (Algoritmo para elegir los valores iniciales para la agrupación de k-means).
 
-En K-Means ++, elegimos un punto al azar y ese es su primer centroide, luego elegimos el siguiente punto en función de la probabilidad que depende de la distancia del primer punto, cuanto más alejado esté el punto, más probable será.
+En k-means ++, elegimos un punto al azar y ese es su primer centroide, luego elegimos el siguiente punto en función de la probabilidad que depende de la distancia del primer punto, cuanto más alejado esté el punto, más probable será.
 
 Entonces tenemos dos centroides, repita el proceso, la probabilidad de cada punto se basa en su distancia al centroide más cercano a ese punto. Ahora, esto introduce una sobrecarga en la inicialización del algoritmo, pero reduce la probabilidad de que una mala inicialización conduzca a un mal resultado de agrupamiento.
 
 **Representación visual de agrupación de k-means:**
 
-<div style="background-color: #fff; max-width: 900px; max-height: 800px;">
+<div style="background-color: #fff; max-width: 900px; max-height: 800px; display: flex; justify-content: center; margin: auto; margin-bottom: 50px;">
     <iframe src="http://shabal.in/visuals/kmeans/1.html" title="description" width="90%" height="800px" style="max-width: 900px;">
+    <p>http://shabal.in/visuals/kmeans/5.html</p>
 </div>
 
-*http://shabal.in/visuals/kmeans/5.html*
 
 ## Pasos para la segmentación de imágenes por clusters
 
@@ -252,4 +256,6 @@ Contemplando el histograma podemos ver que con dos cluster muy probablemente ten
 
 ### Implementación por software
 
-https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/develop/processing_scripts/Segmentacion_Clusters_Kmeans/pfinal.pde
+
+
+[Código fuente](https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/develop/processing_scripts/Segmentacion_Clusters_Kmeans/pfinal.pde)
