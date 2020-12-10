@@ -248,3 +248,8 @@ Contemplando el histograma podemos ver que con dos cluster muy probablemente ten
 | <img src="https://i.postimg.cc/v8P3drpP/8.png" /> | <img src="https://i.postimg.cc/wjRW214w/9.png" /> |
 | $k=2$ y $k=3$ | $k=4$ y $k=5$ |
 | <img src="https://i.postimg.cc/T1H9qxV8/11.png" /> | <img src="https://i.postimg.cc/ydjnxcW8/10.png" /> |
+
+
+### Implementación por software
+
+https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/develop/processing_scripts/Segmentacion_Clusters_Kmeans/pfinal.pde
