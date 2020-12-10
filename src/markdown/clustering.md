@@ -42,17 +42,16 @@ Si un valor apropiado de K no es evidente a partir del conocimiento previo de la
  
 La idea básica detrás de los métodos de partición, como el agrupamiento de K-Means, es definir grupos de modo que se minimice la variación total intra-grupo o, en otras palabras, la suma total de cuadrados dentro del grupo (WCSS). El WCSS total mide la compacidad del agrupamiento y queremos que sea lo más pequeño posible.
 
-<img>
+<img src="https://i2.wp.com/www.aprendemachinelearning.com/wp-content/uploads/2018/03/ejemplo-elbow.png?resize=768%2C422" />
 
 El método Elbow mira el WCSS total en función del número de clústeres: se debe elegir un número de clústeres para que agregar otro clúster no mejore mucho mejor el WCSS total.
 
 Pasos para elegir el número óptimo de clústeres K: (Método del codo)
 
-Calcule la agrupación de K-medias para diferentes valores de K variando K de 1 a 10 agrupaciones.
-Para cada K, calcule la suma de cuadrados total dentro del grupo (WCSS).
-Trace la curva de WCSS frente al número de grupos K.
-La ubicación de una curva (rodilla) en la parcela se considera generalmente como un indicador del número apropiado de grupos.
-¡¡¡Hay una trampa!!!
+1. Calcule la agrupación de K-medias para diferentes valores de K variando K de 1 a 10 agrupaciones.
+2. Para cada K, calcule la suma de cuadrados total dentro del grupo (WCSS).
+3. Trace la curva de WCSS frente al número de grupos K.
+4. La ubicación de una curva (rodilla) en la parcela se considera generalmente como un indicador del número apropiado de grupos.
 
 A pesar de todas las ventajas que tiene K-Means, a veces falla debido a la elección aleatoria de centroides que se llama  La  trampa de inicialización aleatoria.
 
@@ -63,3 +62,5 @@ En K-Means ++, elegimos un punto al azar y ese es su primer centroide, luego ele
 Entonces tenemos dos centroides, repita el proceso, la probabilidad de cada punto se basa en su distancia al centroide más cercano a ese punto. Ahora,  esto introduce una sobrecarga en la inicialización del algoritmo, pero reduce la probabilidad de que una mala inicialización conduzca a un mal resultado de agrupamiento.
 
 Representación visual de agrupación de K-medias:  comenzando con 4 puntos más a la izquierda.
+
+http://shabal.in/visuals/kmeans/5.html
