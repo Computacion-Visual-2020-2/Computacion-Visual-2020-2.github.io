@@ -41,3 +41,25 @@ Si un valor apropiado de K no es evidente a partir del conocimiento previo de la
 ### Método del codo
  
 La idea básica detrás de los métodos de partición, como el agrupamiento de K-Means, es definir grupos de modo que se minimice la variación total intra-grupo o, en otras palabras, la suma total de cuadrados dentro del grupo (WCSS). El WCSS total mide la compacidad del agrupamiento y queremos que sea lo más pequeño posible.
+
+<img>
+
+El método Elbow mira el WCSS total en función del número de clústeres: se debe elegir un número de clústeres para que agregar otro clúster no mejore mucho mejor el WCSS total.
+
+Pasos para elegir el número óptimo de clústeres K: (Método del codo)
+
+Calcule la agrupación de K-medias para diferentes valores de K variando K de 1 a 10 agrupaciones.
+Para cada K, calcule la suma de cuadrados total dentro del grupo (WCSS).
+Trace la curva de WCSS frente al número de grupos K.
+La ubicación de una curva (rodilla) en la parcela se considera generalmente como un indicador del número apropiado de grupos.
+¡¡¡Hay una trampa!!!
+
+A pesar de todas las ventajas que tiene K-Means, a veces falla debido a la elección aleatoria de centroides que se llama  La  trampa de inicialización aleatoria.
+
+Para resolver este problema, tenemos un procedimiento de inicialización para K-Means que se llama  K-Means ++ (Algoritmo para elegir los valores iniciales para la agrupación de K-Means).
+
+En K-Means ++, elegimos un punto al azar y ese es su primer centroide, luego elegimos el siguiente punto en función de la probabilidad que depende de la distancia del primer punto, cuanto más alejado esté el punto, más probable será.
+
+Entonces tenemos dos centroides, repita el proceso, la probabilidad de cada punto se basa en su distancia al centroide más cercano a ese punto. Ahora,  esto introduce una sobrecarga en la inicialización del algoritmo, pero reduce la probabilidad de que una mala inicialización conduzca a un mal resultado de agrupamiento.
+
+Representación visual de agrupación de K-medias:  comenzando con 4 puntos más a la izquierda.
