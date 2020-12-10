@@ -1,4 +1,4 @@
-# Introducción
+## Introducción
 
 La segmentación de imágenes es el proceso de particionar una imagen en objetos constituyentes o regiones. Esta división en partes se basa a menudo en las características de los píxeles de la imagen. Por ejemplo, una forma de encontrar regiones en una imagen es buscar discontinuidades abruptas en los valores de píxel, que normalmente indican bordes. Estas aristas pueden definir regiones. Otros métodos dividen la imagen en regiones en función de los valores de color o la textura.
 
@@ -7,7 +7,7 @@ La mayoría de los algoritmos de segmentación están basados en dos propiedades
 El proceso de segmentación se encarga de evaluar cada píxel de la imagen y decidir si contiene o no las características de interés. Como resultado, este método genera una imagen binaria, donde los píxeles que pertenecen al objeto se representan con un '1' (objeto en primer plano), mientras que los que no pertenecen al mismo se representan con un '0' (fondo). La decisión de pertenencia de un píxel a uno u otro segmento se basa en el análisis de alguna característica de la imagen, como por ejemplo los niveles de intensidad o la textura. 
 
 
-# Tipos
+## Tipos
 
 Existen diferentes tipos de segmentación, listados a continuación: 
 
@@ -18,7 +18,8 @@ Existen diferentes tipos de segmentación, listados a continuación:
 1. **Segmentación basada en morfología matemática.** En sí esta técnica se basa en ecuaciones diferenciales parciales y redes neuronales.
 
 
-**Segmentación basada en características de píxel.** Se evalúa cada píxel en función de las características locales de la imagen en el píxel (y usualmente también sus vecinos), y se decide a qué región (también conocido como segmento) pertenece. Este tipo de segmentación se usa comúnmente cuando se requiere separar objetos con similares características de color o intensidad de un fondo heterogéneo. El caso ideal es aquel en el cual los objetos poseen un rango de colores o intensidad de gris muy estrecho, siendo el fondo uniforme. En tal caso se puede definir un umbral de segmentación para separar objetos del fondo. A esta técnica de asignación de un umbral se la conoce como thresholding (literalmente "umbralización"). 
+### Segmentación basada en características de píxel.
+Se evalúa cada píxel en función de las características locales de la imagen en el píxel (y usualmente también sus vecinos), y se decide a qué región (también conocido como segmento) pertenece. Este tipo de segmentación se usa comúnmente cuando se requiere separar objetos con similares características de color o intensidad de un fondo heterogéneo. El caso ideal es aquel en el cual los objetos poseen un rango de colores o intensidad de gris muy estrecho, siendo el fondo uniforme. En tal caso se puede definir un umbral de segmentación para separar objetos del fondo. A esta técnica de asignación de un umbral se la conoce como thresholding (literalmente "umbralización"). 
 
 <img src="https://github.com/Computacion-Visual-2020-2/Computacion-Visual-2020-2.github.io/blob/develop/src/images/Segmentación.001.png?raw=true" width="450" /> 
 
@@ -37,7 +38,8 @@ Algunas ventajas de la segmentación basada en píxel son:
 - El uso de la segmentación por color elimina los colores indeseados, y por ende el número de bordes de la imagen se decrementa, lo cual resulta útil como etapa previa a una detección de bordes. En tal caso, la complejidad computacional de un detector de bordes disminuye. 
 - Con la ayuda de la segmentación por color, el número de detecciones fallidas se decrementa en una posterior etapa de detección de formas. Esto resulta útil para la detección de objetos que tienen colores y formas muy definidas, como las señales de tráfico. 
 
-**Segmentación basada  en transiciones.** Este método de segmentación se basa en el cambio rápido del calor de intensidad en una imagen porque un solo valor de intensidad no proporciona buena información sobre los bordes. Las técnicas de detección de bordes localizan los bordes y luego se conectan entre sí para formar los límites del objeto. Para realizar la segmentación de regiones se requieren dos métodos básicos de segmentación basados en bordes:
+### Segmentación basada  en transiciones.
+Este método de segmentación se basa en el cambio rápido del calor de intensidad en una imagen porque un solo valor de intensidad no proporciona buena información sobre los bordes. Las técnicas de detección de bordes localizan los bordes y luego se conectan entre sí para formar los límites del objeto. Para realizar la segmentación de regiones se requieren dos métodos básicos de segmentación basados en bordes:
 
 1) Histograma en gris y métodos basados en gradientes. Para detectar los bordes se puede utilizar una de las técnicas básicas de detección de aristas como el operador Sobel, Astuto y Robert, el resultado de estos métodos es básicamente una imagen binaria. Estas son las técnicas estructurales basadas en detección de discontinuidad.
 1) Método de segmentación basado en región. Este método segmenta la imagen en varias regiones que tienen características similares, existen 2 técnicas basadas en este método
@@ -46,7 +48,8 @@ Algunas ventajas de la segmentación basada en píxel son:
 
 Este tipo de segmentación posee ventajas como que es bueno para las imágenes que tienen mejor contraste entre los objetos, sin embargo no es adecuado para errores detectados o cuando la imagen contiene demasiados bordes**.**
 
-**Segmentación basada en modelos.** **Transformada de Hough.** La transformada de Hough es una herramienta que permite detectar curvas en una imagen. Se basa en la búsqueda de características geométricas de los objetos: rectas, triángulos, objetos circulares, etc. La transformada de Hough es una de las técnicas de segmentación basada en modelos más utilizadas, debido a su robustez frente al ruido y a su comportamiento ante la existencia de huecos en la frontera del objeto. A la hora de aplicar la transformada de Hough a una imagen es necesario obtener primero una imagen binaria de los píxeles que forman parte de la frontera del objeto usando, por ejemplo, segmentación basada en umbral. El objetivo de la transformada de Hough es encontrar puntos en la imagen que estén alineados. Esto se reduce a hallar los píxeles de una imagen que satisfagan la siguiente ecuación de la recta en coordenadas polares, para distintos valores de ρ y θ:
+### Segmentación basada en modelos.
+**Transformada de Hough.** La transformada de Hough es una herramienta que permite detectar curvas en una imagen. Se basa en la búsqueda de características geométricas de los objetos: rectas, triángulos, objetos circulares, etc. La transformada de Hough es una de las técnicas de segmentación basada en modelos más utilizadas, debido a su robustez frente al ruido y a su comportamiento ante la existencia de huecos en la frontera del objeto. A la hora de aplicar la transformada de Hough a una imagen es necesario obtener primero una imagen binaria de los píxeles que forman parte de la frontera del objeto usando, por ejemplo, segmentación basada en umbral. El objetivo de la transformada de Hough es encontrar puntos en la imagen que estén alineados. Esto se reduce a hallar los píxeles de una imagen que satisfagan la siguiente ecuación de la recta en coordenadas polares, para distintos valores de ρ y θ:
 
 ρ=x\*cos θ +y\*sen θ
 
@@ -83,7 +86,7 @@ En cuanto a los inconvenientes, los más importantes son:
 - El tiempo de computación y memoria usados es alto. La aplicación de la Transformada de Hough consume muchos recursos. 
 - No ofrece respuesta absoluta, sino un índice de probabilidad de que cada una de las formas posibles sea la buscada. 
 
-**Métodos basados en cuencas**
+### Métodos basados en cuencas
 
 Usan el concepto de interpretación topológica en esto la intensidad representa las cuencas que tiene agujeros en sus mínimos donde el agua se derrama. Cuando el agua alcanza el borde de la cuenca, las cuencas adyacentes se fusionan.
 
@@ -91,7 +94,7 @@ Para mantener la separación entre cuencas se requieren represas y son los borde
 
 Los pixeles que tienen más gradientes se representan como límites contenidos. 
 
-## Segmentación basada en morfología matemática
+### Segmentación basada en morfología matemática
 
 **Segmentación basada en la ecuación diferencial parcial.** 
 
