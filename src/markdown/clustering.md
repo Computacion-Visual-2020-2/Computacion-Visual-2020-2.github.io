@@ -102,7 +102,7 @@ resultado final es una imagen segmentada de la original.
 
 Pongamoslo en práctica
 
-<img src="https://ibb.co/sVN4CQh" />
+<img src="https://i.postimg.cc/bNBC1xgG/1.png" />
 
 Observando el histograma se podría suponer que el número de picos saldría muy elevado y por tanto se requerirían un elevado número de cluster para tener una segmentación válida. No obstante, la imagen a la que corresponde el histograma es esta:
 
