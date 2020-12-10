@@ -30,13 +30,12 @@ Calcule y coloque el nuevo centroide de cada grupo.
 Reasigne cada punto de datos al nuevo centroide más cercano. Si alguna reasignación. tuvo lugar, vaya al paso 4; de lo contrario, el modelo está listo.
 ¿Cómo elegir el valor óptimo de K?
 
-Para una determinada clase de algoritmos de agrupación (en particular, K-Means, K -medoides y   algoritmo de maximización de expectativas ), existe un parámetro comúnmente denominado K que especifica el número de agrupaciones a detectar. Otros algoritmos como el algoritmo  DBSCAN  y  OPTICS  no requieren la especificación de este parámetro; La agrupación en clústeres jerárquica  evita el problema por completo, pero eso está más allá del alcance de este artículo.
+Para una determinada clase de algoritmos de agrupación (en particular, K-Means, K -medoides y   algoritmo de maximización de expectativas ), existe un parámetro comúnmente denominado K que especifica el número de agrupaciones a detectar. Otros algoritmos como el algoritmo  DBSCAN  y  OPTICS  no requieren la especificación de este parámetro; La agrupación en clústeres jerárquica  evita el problema por completo.
 
 Si hablamos de K-Means, entonces la elección correcta de K es a menudo ambigua, con interpretaciones que dependen de la forma y escala de la distribución de puntos en un conjunto de datos y la resolución de agrupación deseada por el usuario. Además, aumentar K sin penalización siempre reducirá la cantidad de error en el agrupamiento resultante, al caso extremo de error cero si cada punto de datos se considera su propio grupo (es decir, cuando K es igual al número de puntos de datos,  n ). Entonces, intuitivamente,  la elección óptima de K logrará un equilibrio entre la compresión máxima de los datos utilizando un solo grupo y la máxima precisión al asignar cada punto de datos a su propio grupo .
 
 Si un valor apropiado de K no es evidente a partir del conocimiento previo de las propiedades del conjunto de datos, debe elegirse de alguna manera. Hay varias categorías de métodos para tomar esta decisión y el  método del codo  es uno de esos métodos.
 
- 
 
 ### Método del codo
  
