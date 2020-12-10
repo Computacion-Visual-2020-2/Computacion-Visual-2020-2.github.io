@@ -21,11 +21,10 @@ const MarkdownRender = props => {
     plugins: [RemarkMathPlugin],
     renderers: {
       ...props.renderers,
+      text: props => <MathJax.Text text={props.value} />,
       html: props => <span dangerouslySetInnerHTML={{ __html: props.value }} />,
-      // text: props => <MathJax.Text text={props.value} />,
     },
   }
-  console.log('Source ', props.source)
 
   return (
     <MathJax.Context
