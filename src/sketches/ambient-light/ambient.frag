@@ -2,8 +2,6 @@
 precision mediump float;
 #endif
 
-#define PI 3.14159265358979323846
-
 uniform vec2 resolution;
 uniform float time;
 uniform vec2 mouse;

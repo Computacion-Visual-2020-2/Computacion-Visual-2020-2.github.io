@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import { navigate } from 'gatsby'
 
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
@@ -74,10 +75,10 @@ const Header = props => (
         <li>
           <button
             onClick={() => {
-              props.onOpenArticle('about')
+              navigate('/segmentation')
             }}
           >
-            About
+            Proyecto final
           </button>
         </li>
       </ul>

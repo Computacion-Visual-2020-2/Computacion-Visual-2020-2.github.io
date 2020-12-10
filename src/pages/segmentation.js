@@ -27,6 +27,8 @@ class Segmentation extends React.Component {
       this.setState({ loading: '' })
     }, 100)
     document.addEventListener('mousedown', this.handleClickOutside)
+
+    this.handleOpenArticle('discussion')
   }
 
   componentWillUnmount() {
@@ -57,6 +59,8 @@ class Segmentation extends React.Component {
         articleTimeout: !this.state.articleTimeout,
       })
     }, 350)
+
+    console.log(this.state)
   }
 
   handleCloseArticle() {
@@ -90,10 +94,10 @@ class Segmentation extends React.Component {
     return (
       <Layout>
         <div id="wrapper">
-          <Taller4
+          {/* <Taller4
             onOpenArticle={this.handleOpenArticle}
             timeout={this.state.timeout}
-          />
+          /> */}
           <Main
             isArticleVisible={this.state.isArticleVisible}
             timeout={this.state.timeout}

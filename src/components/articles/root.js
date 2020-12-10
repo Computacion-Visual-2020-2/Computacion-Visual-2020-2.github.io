@@ -1,4 +1,5 @@
 import React from 'react'
+import Discussion from '../Segmentation/Discussion'
 
 import Workshops from './Workshops'
 
