@@ -106,32 +106,32 @@ Pongamoslo en práctica
 
 Observando el histograma se podría suponer que el número de picos saldría muy elevado y por tanto se requerirían un elevado número de cluster para tener una segmentación válida. No obstante, la imagen a la que corresponde el histograma es esta:
 
-<img src="https://ibb.co/hH4c3X5" />
+<img src="https://i.postimg.cc/Df5YwkbP/2.png" />
 
 En esta imagen podemos interpretar que estando tan diferenciado el fondo de la imagen con dos cluster el resultado puede ser bueno. Y, efectivamente, el resultado no
 podía ser mejor:
 
-<img src="https://ibb.co/CmyGhtb" />
+<img src="https://i.postimg.cc/gkJtwSVF/3.png" />
 
 Por el contrario, hay varios ejemplos que demuestran que la visualización del histograma es bastante aclarador y orientarse a partir de este es muy recomendable.
 Existen casos en los que parece complicada la asignación de cluster. Tales son los casos de:
 
-<img src="https://ibb.co/0r0jztM" />
-<img src="https://ibb.co/DDsZDvY" />
+<img src="https://i.postimg.cc/HxdBTBYN/4.png" />
+<img src="https://i.postimg.cc/PJqywJ8z/5.png" />
 
 Donde a partir de la imagen en escala de grises uno no sabe cuántos clusters aplicar para tener una silueta clara de la imagen. No obstante, los histogramas son aclaradores.
 
-<img src="https://ibb.co/2SVhLKZ" />
+<img src="https://i.postimg.cc/BvWmVJd4/6.png" />
 
 Contemplando el histograma podemos ver que con dos cluster muy probablemente tengamos buenos resultados. Y es así:
 
-<img src="https://ibb.co/tPH8dn9" />
+<img src="https://i.postimg.cc/YS1dcJHg/7.png" />
 
 Otro ejemplo:
 
-<img src="https://ibb.co/FVVLTf0" />
+<img src="https://i.postimg.cc/v8P3drpP/8.png" />
 <img src="https://ibb.co/1ZKb3Kh" />
 Segmentación  k=2 y k=3
 <img src="https://ibb.co/BG0Tvh7" />
 Segmentación  k=4 y k=5
-<img src="https://ibb.co/xYMWXd5" />
+<img src="https://i.postimg.cc/wjRW214w/9.png" />
